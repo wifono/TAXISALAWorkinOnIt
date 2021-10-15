@@ -25,11 +25,19 @@ body {
     
 }
 
+.flexbox {
+    display: flex;
+}
 
 .container h1, .navigation {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: min-content;
+    
+    margin-top: 5vw;
+
+
 }
 
 ul {
@@ -47,6 +55,9 @@ ul {
     background: lighten($second-color, 8%);
     border-bottom: .1em darken($second-color, 5%) solid;
     box-shadow: 0 0 1em darken($second-color, 30%);
+    width: 45vw;
+    height: 100vh;
+    position: fixed;
 }
 
 .site {
@@ -63,8 +74,6 @@ ul {
 h1 {
    // background:    linear-gradient(186deg, darken($second-color, 8%) 75.5%, rgb(239, 239, 239) 100%);
     color: lighten($font-main-color, 15%);
-
-
   //box-shadow: darken($main-color, 100%) 0em .2em .1em;
 
   font-weight: 300;
@@ -79,15 +88,14 @@ h1 {
 
 .mainContent {
     display: flex;
-    flex-direction: row;
-    
-    gap: 2em;
-    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: flex-start;
 
+    flex-wrap: nowrap;    
 
-    flex-wrap: wrap;    
-
-    margin-top: 3.5em;
+    margin-top: 2em;
+    margin-left: 50vw;
 
 }
 
@@ -145,7 +153,7 @@ h2 {
 
 .taxiBox {
     
-    background:    lighten($second-color, 8%);
+    background: opacify($main-color, .006);
 
     margin: 0;
 
@@ -159,10 +167,10 @@ h2 {
     text-align: center;
     
  
-    width: 25vw;
-    height: 13vw;
+    width: 45vw;
+    height: 10vw;
 
-    box-shadow: darken($main-color, 100%) .5em .5em .5em .3em;
+    cursor: pointer;
 
   a {
       text-decoration: none;
@@ -179,8 +187,11 @@ h2 {
 
 .taxiBox:hover {
 
+
+    background: rgb(255, 221, 31);
+
     opacity: 1;
-    color: rgb(255, 221, 31);
+    color: lighten($font-main-color, 15%);
     transition: .5s;
     animation: ease-in;
 
@@ -195,6 +206,7 @@ footer p {
 
     text-align: center;
     color: lighten($font-main-color, 50);
+    margin-left: 45vw;
 }
 
 footer {
@@ -204,11 +216,9 @@ footer {
         font: {
             family: $logo-font;
         }
-
-        margin: 4em 0 0 0;
-
         border-top: .4em darken($second-color, 10%) solid;
 
+        margin-top: 1em;
 
 }
 
@@ -216,45 +226,30 @@ footer {
 
 // MEDIA QUERRIES
 
+@media screen and (max-width:1408px) {
 
-@media screen and (max-width:1279px) {
+    .logo {
+        font-size: 3em;
+    }
+    
+}
 
-    .mainContent {
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
+@media screen and (max-width:1280px) {
+
+    .logo {
+        font-size: 2.7em;
     }
 
-    .taxiBox {
+    }
 
-        width: 90vw;
+    @media screen and (max-width:1140px) {
 
-        margin: 0;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        h2 {
-            font-size: 4em;
+        .logo {
+            font-size: 2.3em;
         }
-    }
-  
-    }
-
-
-    @media screen and (max-width:1015px) { 
-.taxiBox
-        {
-        h2 {
-            font-size: 4em;
+    
         }
 
-     width: 90vw;
-   
-
-    }
-    }
 
     @media screen and (max-width:737px) { 
 
@@ -262,15 +257,52 @@ footer {
         
             {
                 h2 {
-                    font-size: 3em;
+                    font-size: 2.5em;
         }
     }
     }
 
+    @media screen and (max-width:664px){
+        .taxiBox {
+            h2 {
+                font-size: 2.1em;
+            }
+        }
+    }
+
     @media screen and (max-width:658px) {
         .logo {
-            font-size: 2.5em;
+            font-size: 1.9em;
         }
+    }
+
+    @media screen and (max-width:600px){
+        
+        .logo {
+            width: 100%;
+            position: unset;
+            height: 5em;
+        }
+
+        .flexbox {
+            flex-direction: column;
+        }
+
+        .container h1 {
+            margin-top: .5em;
+
+        }
+
+        .mainContent {
+            margin-left: 0;
+            align-items: center;
+        }
+
+        .taxiBox {
+            width: 85%;
+            padding: 1.5em;
+        }
+
     }
            
 
@@ -299,16 +331,9 @@ footer {
 
         @media  screen and (max-width:521px) {
             .logo {
-                font-size:2.2em
+                font-size:1.8em
             }
         }
-
-@media screen and (max-width: 474px) {
-    .logo {
-        font-size: 2em;
-    }
-    
-}
 
     @media screen and (max-width:455px) {
             
@@ -337,14 +362,14 @@ footer {
     }
 } 
 
-@media screen and (max-width: 372px) {
+@media screen and (max-width: 375px) {
 
         .logo {
             h1 {
-                font-size: 1.2em;
-                margin: .6em 0 -.5em 0;
-
+                font-size: 1.5em;
             }
+
+            height: 3.5em;
         }
         
     }
