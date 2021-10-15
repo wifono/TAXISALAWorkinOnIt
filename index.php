@@ -1,10 +1,13 @@
-<?php
+ 
+ 
+ 
+ 
+ <?php
 
     include "partials/header.php"
 
 ?>
-
-            <div class="container">
+               <div class="container">
                 <section class="mainContent">
 
                     <div class="taxiBox">
@@ -65,7 +68,7 @@
 
                 </section>
             </div>
-
+</div>
             <?php 
 
                 include "partials/footer.php"
