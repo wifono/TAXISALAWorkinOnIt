@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(18deg, #131311 0%, #4f4f4f 100%);
+  display: flex;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: .9em; }
+
+.container h1, .navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+ul {
+  display: flex;
+  gap: 2em;
+  padding: 0; }
+
+header {
+  margin: 3em; }
+
+.logo {
+  display: flex;
+  justify-content: center;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.6rem;
+  margin-left: .5em;
+  margin-top: 1.5em;
+  margin-bottom: 1em; }
+
+.site {
+  width: 95vw;
+  background: #1010101b;
+  margin: 0; }
+
+h1 {
+  background: linear-gradient(186deg, #ffe448 75.5%, #efefef 100%);
+  color: #090909;
+  padding: .3em .3em  0 .3em;
+  border-radius: .19em;
+  box-shadow: rgba(0, 0, 0, 0.1058823529) 0em 0.2em 0.1em; }
+
+.mainContent {
+  display: flex;
+  flex-direction: row;
+  margin: 1em;
+  gap: 2em;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+h2 {
+  font-family: "Bebas Neue", cursive;
+  font-weight: 400;
+  font-size: 2.2em; }
+
+.navigation li {
+  list-style-type: none;
+  font-size: 1.2em; }
+  .navigation li a {
+    color: #bcbcbc;
+    text-decoration: none; }
+  .navigation li a:hover {
+    color: #efefef; }
+
+.navigation {
+  background: rgba(31, 31, 31, 0.898);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 20;
+  box-shadow: rgba(0, 0, 0, 0.1058823529) 0em 0.5em 0.5em; }
+  .navigation .active {
+    color: #ffea71; }
+
+.taxiBox {
+  background: linear-gradient(186deg, #ffe448 75.5%, #efefef 100%);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #090909;
+  opacity: .7;
+  text-align: center;
+  width: 20vw;
+  height: 20vw;
+  border-radius: 25em;
+  box-shadow: rgba(0, 0, 0, 0.1058823529) 0.5em 0.5em 0.5em 0.3em; }
+  .taxiBox a {
+    text-decoration: none;
+    color: #090909;
+    font-weight: 100;
+    font-size: 1.5em; }
+
+.taxiBox:hover {
+  opacity: 1;
+  transition: .5s;
+  animation: ease-in; }
+
+footer p {
+  text-align: center;
+  color: #898989; }
+
+footer {
+  background: rgba(31, 31, 31, 0.498);
+  padding: .1em;
+  font-family: "Bebas Neue", cursive;
+  margin: 8em 0 0 0; }
+
+@media screen and (max-width: 1279px) {
+  .mainContent {
+    flex-direction: column;
+    flex-wrap: nowrap; }
+
+  .taxiBox {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+    .taxiBox h2 {
+      font-size: 7em;
+      margin-top: 1em; }
+    .taxiBox a {
+      margin-left: 20rem; } }
+@media screen and (max-width: 1015px) {
+  .taxiBox h2 {
+    font-size: 4em; } }
+@media screen and (max-width: 737px) {
+  .taxiBox h2 {
+    font-size: 3em; }
+  .taxiBox a {
+    margin-left: 1rem; } }
+@media screen and (max-width: 540px) {
+  .taxiBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2; }
+    .taxiBox h2 {
+      margin-top: 1em; }
+
+  .taxiBox a {
+    font-size: 1.3em;
+    margin-left: 3em; } }
+@media screen and (max-width: 440px) {
+  .logo h1 {
+    font-size: 1.6em;
+    margin: 0.5em 0 -.2em 0; } }
+@media screen and (max-width: 383px) {
+  .taxiBox h2 {
+    font-size: 2em; }
+  .taxiBox a {
+    font-size: 1em;
+    margin-left: 1em; } }
+@media screen and (max-width: 372px) {
+  .logo h1 {
+    font-size: 1.2em;
+    margin: .6em 0 -.5em 0; } }
+
+/*# sourceMappingURL=generals.css.map */

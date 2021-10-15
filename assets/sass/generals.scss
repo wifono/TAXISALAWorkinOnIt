@@ -1,0 +1,347 @@
+// VARIABLES
+
+$background-color: #131311;
+$main-color: #1010101b;
+$second-color: #ffea71;
+$navig-color: rgba(31, 31, 31, 0.898);
+
+$font-main-color: rgb(9, 9, 9);
+
+$logo-font:'Bebas Neue', cursive; 
+$font: 'Open Sans', sans-serif;
+
+
+// GENERALS
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(18deg, $background-color 0%, rgb(79, 79, 79) 100%);     
+    display: flex;
+    justify-content: center;
+
+    font-family: $font;
+    font-size: .9em;
+    
+}
+
+
+.container h1, .navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    gap: 2em;
+    padding: 0;
+}
+
+header {
+    margin: 3em
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    font-family: $logo-font;
+    font-size: 1.6rem;
+
+    margin: {
+        left: .5em;
+        top: 1.5em;
+        bottom: 1em;
+    }
+}
+
+.site {
+    width: 95vw;
+
+    background: $main-color;
+    
+
+    margin: 0;
+
+}
+// TYPOGRAPHY
+
+h1 {
+    background:    linear-gradient(186deg, darken($second-color, 8%) 75.5%, rgb(239, 239, 239) 100%);
+    color: $font-main-color;
+
+    padding: .3em .3em  0 .3em;
+    border-radius: .19em;
+
+    box-shadow: darken($main-color, 100%) 0em .2em .1em;
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: row;
+    margin: 1em ;
+    
+    gap: 2em;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+}
+
+h2 {
+    font: {
+        family: $logo-font;
+        weight: 400 ;
+        size: 2.2em;
+    }
+  
+}
+
+
+
+// NAVIGATION
+
+.navigation li {
+    list-style-type: none;
+
+    a {
+        color: lighten($font-main-color, 70%);
+        text-decoration: none;
+        
+     
+    }
+
+    a:hover {
+        color: lighten($font-main-color, 90%);
+    }
+
+    font-size: 1.2em;
+}
+
+.navigation {
+    background: $navig-color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 20;
+
+    box-shadow: darken($main-color, 20%) 0em  .5em .5em; 
+    
+.active {
+    
+    color: $second-color;
+}
+}
+
+
+
+
+// BOXES
+
+.taxiBox {
+    
+    background:    linear-gradient(186deg, darken($second-color, 8%) 75.5%, rgb(239, 239, 239) 100%);
+
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    color: $font-main-color;
+    opacity: .7;
+
+    text-align: center;
+    
+ 
+    width: 20vw;
+    height: 20vw;
+
+    border-radius: 25em;
+    box-shadow: darken($main-color, 100%) .5em .5em .5em .3em;
+
+  a {
+      text-decoration: none;
+      color: $font-main-color;
+
+      font: {
+          weight: 100;
+          size: 1.5em;
+      }
+  }
+
+  
+}   
+
+.taxiBox:hover {
+    
+
+    opacity: 1;
+    transition: .5s;
+    animation: ease-in;
+
+
+}
+
+
+
+// FOOTER
+
+footer p {
+
+    text-align: center;
+    color: lighten($font-main-color, 50);
+}
+
+footer {
+        background: transparentize($navig-color, 0.4);
+        padding: .1em;
+
+        font: {
+            family: $logo-font;
+        }
+
+        margin: 8em 0 0 0;
+
+}
+
+
+
+// MEDIA QUERRIES
+
+
+@media screen and (max-width:1279px) {
+
+    .mainContent {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .taxiBox {
+
+        width: 100%;
+
+        margin: 0;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        h2 {
+            font-size: 7em;
+            margin-top: 1em;
+        }
+
+        a {
+            margin-left: 20rem;
+        }
+
+    }
+  
+    }
+
+
+    @media screen and (max-width:1015px) { 
+.taxiBox
+    
+    {
+        h2 {
+            font-size: 4em;
+        }
+
+
+
+    }
+    }
+
+    @media screen and (max-width:737px) { 
+
+        .taxiBox
+            
+            {
+                h2 {
+                    font-size: 3em;
+                }
+        
+        
+        
+
+             a {
+                margin-left: 1rem;
+            }
+
+        }
+
+    }
+           
+
+
+
+    @media screen and (max-width:540px) {
+    
+        .taxiBox  {
+            
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        gap: 2;
+
+        h2 {
+            margin-top: 1em;
+
+        }
+        
+    
+        }
+
+        .taxiBox a {
+            font-size: 1.3em;
+            margin-left: 3em;
+        }
+      
+        }
+
+
+
+    @media screen and (max-width:440px) {
+            
+            .logo {
+            h1 {
+                font-size: 1.6em;
+                margin: 0.5em 0 -.2em 0;
+            }
+
+        }
+    }
+
+        
+    @media screen and (max-width:383px) {
+    
+
+        .taxiBox {
+
+            h2 {
+                font-size: 2em;
+            }
+
+         a {
+            font-size: 1em;
+            margin-left: 1em;
+        }
+      
+    }
+} 
+
+@media screen and (max-width: 372px) {
+
+        .logo {
+            h1 {
+                font-size: 1.2em;
+                margin: .6em 0 -.5em 0;
+
+            }
+        }
+        
+    }
