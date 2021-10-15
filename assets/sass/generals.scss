@@ -2,7 +2,7 @@
 
 $background-color: #131311;
 $main-color: #1010101b;
-$second-color: #ffea71;
+$second-color: #afafaf;
 $navig-color: rgba(31, 31, 31, 0.898);
 
 $font-main-color: rgb(9, 9, 9);
@@ -38,25 +38,19 @@ ul {
     padding: 0;
 }
 
-header {
-    margin: 3em
-}
 
 .logo {
     display: flex;
     justify-content: center;
     font-family: $logo-font;
-    font-size: 1.6rem;
-
-    margin: {
-        left: .5em;
-        top: 1.5em;
-        bottom: 1em;
-    }
+    font-size: 3rem;
+    background: lighten($second-color, 8%);
+    border-bottom: .1em darken($second-color, 50%) solid;
+    box-shadow: 0 0 1em darken($second-color, 60%);
 }
 
 .site {
-    width: 95vw;
+    width: 100vw;
 
     background: $main-color;
     
@@ -67,24 +61,32 @@ header {
 // TYPOGRAPHY
 
 h1 {
-    background:    linear-gradient(186deg, darken($second-color, 8%) 75.5%, rgb(239, 239, 239) 100%);
-    color: $font-main-color;
+   // background:    linear-gradient(186deg, darken($second-color, 8%) 75.5%, rgb(239, 239, 239) 100%);
+    color: lighten($font-main-color, 15%);
 
-    padding: .3em .3em  0 .3em;
-    border-radius: .19em;
 
-    box-shadow: darken($main-color, 100%) 0em .2em .1em;
+  //box-shadow: darken($main-color, 100%) 0em .2em .1em;
+
+  font-weight: 300;
+  border: {
+      top: .02em lighten($font-main-color, 50%) solid;
+      bottom: .02em lighten($font-main-color, 50%) solid;
+}       
+    padding-top:.20em;
+    padding-left:.5em;
+    padding-right: .5em;
 }
 
 .mainContent {
     display: flex;
     flex-direction: row;
-    margin: 1em ;
     
     gap: 2em;
     justify-content: center;
 
-    flex-wrap: wrap;
+    flex-wrap: wrap;    
+
+    margin-top: 1.8em;
 
 }
 
@@ -92,8 +94,9 @@ h2 {
     font: {
         family: $logo-font;
         weight: 400 ;
-        size: 2.2em;
+        size: 3em;
     }
+    margin: 0;
   
 }
 
@@ -141,7 +144,7 @@ h2 {
 
 .taxiBox {
     
-    background:    linear-gradient(186deg, darken($second-color, 8%) 75.5%, rgb(239, 239, 239) 100%);
+    background:    linear-gradient(186deg, darken($second-color, 8%) 75.5%, rgb(165, 165, 165) 100%);
 
     margin: 0;
 
@@ -155,10 +158,9 @@ h2 {
     text-align: center;
     
  
-    width: 20vw;
-    height: 20vw;
+    width: 25vw;
+    height: 13vw;
 
-    border-radius: 25em;
     box-shadow: darken($main-color, 100%) .5em .5em .5em .3em;
 
   a {
@@ -178,6 +180,7 @@ h2 {
     
 
     opacity: 1;
+    color: rgb(197, 197, 22);
     transition: .5s;
     animation: ease-in;
 
@@ -216,27 +219,22 @@ footer {
     .mainContent {
         flex-direction: column;
         flex-wrap: nowrap;
+        align-items: center;
     }
 
     .taxiBox {
 
-        width: 100%;
+        width: 90vw;
 
         margin: 0;
 
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
 
         h2 {
-            font-size: 7em;
-            margin-top: 1em;
+            font-size: 4em;
         }
-
-        a {
-            margin-left: 20rem;
-        }
-
     }
   
     }
@@ -244,13 +242,13 @@ footer {
 
     @media screen and (max-width:1015px) { 
 .taxiBox
-    
-    {
+        {
         h2 {
             font-size: 4em;
         }
 
-
+     width: 90vw;
+   
 
     }
     }
@@ -258,21 +256,18 @@ footer {
     @media screen and (max-width:737px) { 
 
         .taxiBox
-            
+        
             {
                 h2 {
                     font-size: 3em;
-                }
-        
-        
-        
-
-             a {
-                margin-left: 1rem;
-            }
-
         }
+    }
+    }
 
+    @media screen and (max-width:658px) {
+        .logo {
+            font-size: 2.5em;
+        }
     }
            
 
@@ -285,14 +280,9 @@ footer {
         display: flex;
         flex-direction: row;
         align-items: center;
-
-        gap: 2;
-
-        h2 {
-            margin-top: 1em;
-
-        }
-        
+        margin-top: 0;
+        height: 20vw;
+    
     
         }
 
@@ -303,16 +293,25 @@ footer {
       
         }
 
+        @media  screen and (max-width:521px) {
+            .logo {
+                font-size:2.2em
+            }
+        }
 
+@media screen and (max-width: 474px) {
+    .logo {
+        font-size: 2em;
+    }
+    
+}
 
-    @media screen and (max-width:440px) {
+    @media screen and (max-width:455px) {
             
             .logo {
             h1 {
-                font-size: 1.6em;
-                margin: 0.5em 0 -.2em 0;
+                font-size: 1.8em;
             }
-
         }
     }
 

@@ -17,42 +17,42 @@ ul {
   gap: 2em;
   padding: 0; }
 
-header {
-  margin: 3em; }
-
 .logo {
   display: flex;
   justify-content: center;
   font-family: "Bebas Neue", cursive;
-  font-size: 1.6rem;
-  margin-left: .5em;
-  margin-top: 1.5em;
-  margin-bottom: 1em; }
+  font-size: 3rem;
+  background: #c3c3c3;
+  border-bottom: 0.1em #303030 solid;
+  box-shadow: 0 0 1em #161616; }
 
 .site {
-  width: 95vw;
+  width: 100vw;
   background: #1010101b;
   margin: 0; }
 
 h1 {
-  background: linear-gradient(186deg, #ffe448 75.5%, #efefef 100%);
-  color: #090909;
-  padding: .3em .3em  0 .3em;
-  border-radius: .19em;
-  box-shadow: rgba(0, 0, 0, 0.1058823529) 0em 0.2em 0.1em; }
+  color: #2f2f2f;
+  font-weight: 300;
+  border-top: 0.02em #898989 solid;
+  border-bottom: 0.02em #898989 solid;
+  padding-top: .20em;
+  padding-left: .5em;
+  padding-right: .5em; }
 
 .mainContent {
   display: flex;
   flex-direction: row;
-  margin: 1em;
   gap: 2em;
   justify-content: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin-top: 1.8em; }
 
 h2 {
   font-family: "Bebas Neue", cursive;
   font-weight: 400;
-  font-size: 2.2em; }
+  font-size: 3em;
+  margin: 0; }
 
 .navigation li {
   list-style-type: none;
@@ -72,10 +72,10 @@ h2 {
   z-index: 20;
   box-shadow: rgba(0, 0, 0, 0.1058823529) 0em 0.5em 0.5em; }
   .navigation .active {
-    color: #ffea71; }
+    color: #afafaf; }
 
 .taxiBox {
-  background: linear-gradient(186deg, #ffe448 75.5%, #efefef 100%);
+  background: linear-gradient(186deg, #9b9b9b 75.5%, #a5a5a5 100%);
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -83,9 +83,8 @@ h2 {
   color: #090909;
   opacity: .7;
   text-align: center;
-  width: 20vw;
-  height: 20vw;
-  border-radius: 25em;
+  width: 25vw;
+  height: 13vw;
   box-shadow: rgba(0, 0, 0, 0.1058823529) 0.5em 0.5em 0.5em 0.3em; }
   .taxiBox a {
     text-decoration: none;
@@ -95,6 +94,7 @@ h2 {
 
 .taxiBox:hover {
   opacity: 1;
+  color: #c5c516;
   transition: .5s;
   animation: ease-in; }
 
@@ -111,43 +111,48 @@ footer {
 @media screen and (max-width: 1279px) {
   .mainContent {
     flex-direction: column;
-    flex-wrap: nowrap; }
+    flex-wrap: nowrap;
+    align-items: center; }
 
   .taxiBox {
-    width: 100%;
+    width: 90vw;
     margin: 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center; }
     .taxiBox h2 {
-      font-size: 7em;
-      margin-top: 1em; }
-    .taxiBox a {
-      margin-left: 20rem; } }
+      font-size: 4em; } }
 @media screen and (max-width: 1015px) {
-  .taxiBox h2 {
-    font-size: 4em; } }
+  .taxiBox {
+    width: 90vw; }
+    .taxiBox h2 {
+      font-size: 4em; } }
 @media screen and (max-width: 737px) {
   .taxiBox h2 {
-    font-size: 3em; }
-  .taxiBox a {
-    margin-left: 1rem; } }
+    font-size: 3em; } }
+@media screen and (max-width: 658px) {
+  .logo {
+    font-size: 2.5em; } }
 @media screen and (max-width: 540px) {
   .taxiBox {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 2; }
-    .taxiBox h2 {
-      margin-top: 1em; }
+    margin-top: 0;
+    height: 20vw; }
 
   .taxiBox a {
     font-size: 1.3em;
     margin-left: 3em; } }
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 521px) {
+  .logo {
+    font-size: 2.2em; } }
+@media screen and (max-width: 474px) {
+  .logo {
+    font-size: 2em; } }
+@media screen and (max-width: 455px) {
   .logo h1 {
-    font-size: 1.6em;
-    margin: 0.5em 0 -.2em 0; } }
+    font-size: 1.8em; } }
 @media screen and (max-width: 383px) {
   .taxiBox h2 {
     font-size: 2em; }
