@@ -16,7 +16,7 @@ $font: 'Open Sans', sans-serif;
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(18deg, $background-color 0%, rgb(79, 79, 79) 100%);     
+    background: rgba(24, 24, 24, 0.432);     
     display: flex;
     justify-content: center;
 
@@ -45,8 +45,8 @@ ul {
     font-family: $logo-font;
     font-size: 3rem;
     background: lighten($second-color, 8%);
-    border-bottom: .1em darken($second-color, 50%) solid;
-    box-shadow: 0 0 1em darken($second-color, 60%);
+    border-bottom: .1em darken($second-color, 5%) solid;
+    box-shadow: 0 0 1em darken($second-color, 30%);
 }
 
 .site {
@@ -84,9 +84,10 @@ h1 {
     gap: 2em;
     justify-content: center;
 
+
     flex-wrap: wrap;    
 
-    margin-top: 1.8em;
+    margin-top: 3.5em;
 
 }
 
@@ -144,7 +145,7 @@ h2 {
 
 .taxiBox {
     
-    background:    linear-gradient(186deg, darken($second-color, 8%) 75.5%, rgb(165, 165, 165) 100%);
+    background:    lighten($second-color, 8%);
 
     margin: 0;
 
@@ -177,10 +178,9 @@ h2 {
 }   
 
 .taxiBox:hover {
-    
 
     opacity: 1;
-    color: rgb(197, 197, 22);
+    color: rgb(255, 221, 31);
     transition: .5s;
     animation: ease-in;
 
@@ -198,14 +198,17 @@ footer p {
 }
 
 footer {
-        background: transparentize($navig-color, 0.4);
+        background: lighten($second-color, 8%);
         padding: .1em;
 
         font: {
             family: $logo-font;
         }
 
-        margin: 8em 0 0 0;
+        margin: 4em 0 0 0;
+
+        border-top: .4em darken($second-color, 10%) solid;
+
 
 }
 
@@ -282,13 +285,14 @@ footer {
         align-items: center;
         margin-top: 0;
         height: 20vw;
+        justify-content: space-evenly;
+
     
     
         }
 
         .taxiBox a {
             font-size: 1.3em;
-            margin-left: 3em;
         }
       
         }

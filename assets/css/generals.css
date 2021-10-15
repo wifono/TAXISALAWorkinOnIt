@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(18deg, #131311 0%, #4f4f4f 100%);
+  background: rgba(24, 24, 24, 0.432);
   display: flex;
   justify-content: center;
   font-family: "Open Sans", sans-serif;
@@ -23,8 +23,8 @@ ul {
   font-family: "Bebas Neue", cursive;
   font-size: 3rem;
   background: #c3c3c3;
-  border-bottom: 0.1em #303030 solid;
-  box-shadow: 0 0 1em #161616; }
+  border-bottom: 0.1em #a2a2a2 solid;
+  box-shadow: 0 0 1em #636363; }
 
 .site {
   width: 100vw;
@@ -46,7 +46,7 @@ h1 {
   gap: 2em;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 1.8em; }
+  margin-top: 3.5em; }
 
 h2 {
   font-family: "Bebas Neue", cursive;
@@ -75,7 +75,7 @@ h2 {
     color: #afafaf; }
 
 .taxiBox {
-  background: linear-gradient(186deg, #9b9b9b 75.5%, #a5a5a5 100%);
+  background: #c3c3c3;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -94,7 +94,7 @@ h2 {
 
 .taxiBox:hover {
   opacity: 1;
-  color: #c5c516;
+  color: #ffdd1f;
   transition: .5s;
   animation: ease-in; }
 
@@ -103,10 +103,11 @@ footer p {
   color: #898989; }
 
 footer {
-  background: rgba(31, 31, 31, 0.498);
+  background: #c3c3c3;
   padding: .1em;
   font-family: "Bebas Neue", cursive;
-  margin: 8em 0 0 0; }
+  margin: 4em 0 0 0;
+  border-top: 0.4em #969696 solid; }
 
 @media screen and (max-width: 1279px) {
   .mainContent {
@@ -139,11 +140,11 @@ footer {
     flex-direction: row;
     align-items: center;
     margin-top: 0;
-    height: 20vw; }
+    height: 20vw;
+    justify-content: space-evenly; }
 
   .taxiBox a {
-    font-size: 1.3em;
-    margin-left: 3em; } }
+    font-size: 1.3em; } }
 @media screen and (max-width: 521px) {
   .logo {
     font-size: 2.2em; } }
