@@ -206,12 +206,13 @@ h2 {
 
     padding: 2rem;
 
+    cursor: pointer;
+
 
     h2 {
         color: #131311;
     }
 
-    
 
   a {
       text-decoration: none;
@@ -221,10 +222,17 @@ h2 {
           weight: 100;
           size: 1.5em;
       }
-      
 }
 
+
 }   
+    .order {
+        opacity: 1;
+    }
+
+    .isvisible {
+        opacity: 1;
+    }
 
 .taxiBox:hover {
 

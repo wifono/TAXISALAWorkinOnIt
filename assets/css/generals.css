@@ -111,7 +111,8 @@ h2 {
   text-align: center;
   width: 40vw;
   height: 10vw;
-  padding: 2rem; }
+  padding: 2rem;
+  cursor: pointer; }
   .taxiBox h2 {
     color: #131311; }
   .taxiBox a {
@@ -119,6 +120,12 @@ h2 {
     color: #111111;
     font-weight: 100;
     font-size: 1.5em; }
+
+.order {
+  opacity: 1; }
+
+.isvisible {
+  opacity: 1; }
 
 .taxiBox:hover {
   background: #061c36f1;
