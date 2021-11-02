@@ -5,7 +5,9 @@ $main-color: #1010101b;
 $second-color: #afafaf;
 $navig-color: rgba(31, 31, 31, 0.898);
 
-$font-main-color: rgb(9, 9, 9);
+$font-main-color: rgb(17, 17, 17);
+
+$logo-color: rgb(243, 239, 0);
 
 $logo-font:'Bebas Neue', cursive; 
 $font: 'Open Sans', sans-serif;
@@ -16,9 +18,10 @@ $font: 'Open Sans', sans-serif;
 body {
     margin: 0;
     padding: 0;
-    background: rgba(24, 24, 24, 0.432);     
+    background: #F5ED00;
     display: flex;
     justify-content: center;
+    min-height: 100vh;
 
     font-family: $font;
     font-size: .9em;
@@ -27,15 +30,17 @@ body {
 
 .flexbox {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .container h1, .navigation {
     display: flex;
     flex-direction: column;
-    align-items: center;
     height: min-content;
     
-    margin-top: 5vw;
+    margin-top: -5em;
 
 
 }
@@ -46,18 +51,22 @@ ul {
     padding: 0;
 }
 
+header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #061c36;
+    border-bottom: .2rem solid #494700;
+}
 
 .logo {
-    display: flex;
-    justify-content: center;
+    
     font-family: $logo-font;
-    font-size: 3rem;
-    background: lighten($second-color, 8%);
-    border-bottom: .1em darken($second-color, 5%) solid;
-    box-shadow: 0 0 1em darken($second-color, 30%);
-    width: 45vw;
-    height: 100vh;
-    position: fixed;
+    font-size: 2.5rem;
+
+  
 }
 
 .site {
@@ -73,48 +82,70 @@ ul {
 
 h1 {
    // background:    linear-gradient(186deg, darken($second-color, 8%) 75.5%, rgb(239, 239, 239) 100%);
-    color: lighten($font-main-color, 15%);
+    color: #F5ED00;
   //box-shadow: darken($main-color, 100%) 0em .2em .1em;
-
+ 
   font-weight: 300;
-  border: {
-      top: .02em lighten($font-main-color, 50%) solid;
-      bottom: .02em lighten($font-main-color, 50%) solid;
-}       
+       
     padding-top:.20em;
     padding-left:.5em;
     padding-right: .5em;
+
+    border-bottom: .03em #F5ED00 solid;
+
+   
 }
 
 .mainContent {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    
     gap: 1em;
-    justify-content: flex-start;
-
-    flex-wrap: nowrap;    
+    
+    flex-wrap: wrap;
+    justify-content: center;
 
     margin-top: 2em;
-    margin-left: 50vw;
-
 }
 
 h2 {
     font: {
         family: $logo-font;
         weight: 400 ;
-        size: 3em;
+        size: 2.2rem;
     }
     margin: 0;
   
 }
 
 
+// SOCIAL ICONS
+
+.logo li {
+    list-style-type: none;
+}
+
+
+.logo a {
+    color:  $navig-color;
+}
+
+#fblogo:hover {
+    color:  #4267B2;
+    transition: .5s all ease-in;
+}
+
+.logo a:hover {
+    color: #131311;
+    transition: .5s all ease-in;
+}
+
 
 // NAVIGATION
 
-.navigation li {
+.socials li {
     list-style-type: none;
+
 
     a {
         color: lighten($font-main-color, 70%);
@@ -127,7 +158,9 @@ h2 {
         color: lighten($font-main-color, 90%);
     }
 
-    font-size: 1.2em;
+    font-size: 1.8em;
+
+
 }
 
 .navigation {
@@ -138,7 +171,7 @@ h2 {
     width: 100vw;
     z-index: 20;
 
-    box-shadow: darken($main-color, 20%) 0em  .5em .5em; 
+
     
 .active {
     
@@ -153,24 +186,32 @@ h2 {
 
 .taxiBox {
     
-    background: opacify($main-color, .006);
-
+    background: rgba(155, 155, 155, 0.253);
     margin: 0;
+    margin-top: 1rem;
+
+    border-radius: 1rem;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     
     color: $font-main-color;
-    opacity: .7;
 
     text-align: center;
-    
  
-    width: 45vw;
+    width: 40vw;
     height: 10vw;
 
-    cursor: pointer;
+    padding: 2rem;
+
+
+    h2 {
+        color: #131311;
+    }
+
+    
 
   a {
       text-decoration: none;
@@ -180,46 +221,53 @@ h2 {
           weight: 100;
           size: 1.5em;
       }
-  }
+      
+}
 
-  
 }   
 
 .taxiBox:hover {
 
 
-    background: rgb(255, 221, 31);
+    background: #061c36f1;
 
     opacity: 1;
     color: lighten($font-main-color, 15%);
-    transition: .5s;
+    transition: .4s;
     animation: ease-in;
 
+    h2 {
+        color:#F5ED00;
+    }
 
+    a {
+        color: aliceblue;
+    }
 }
 
 
 
 // FOOTER
 
-footer p {
 
-    text-align: center;
-    color: lighten($font-main-color, 50);
-    margin-left: 45vw;
-}
 
 footer {
-        background: lighten($second-color, 8%);
-        padding: .1em;
+    margin-top: 2rem;
+        background: #061c36;
+        padding: .02em;
 
         font: {
             family: $logo-font;
         }
-        border-top: .4em darken($second-color, 10%) solid;
+        border-top: .2em rgb(0, 96, 160) solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
 
-        margin-top: 1em;
-
+.mainflex {
+    display: flex;
+    flex-direction: column;
 }
 
 

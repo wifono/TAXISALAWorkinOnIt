@@ -25,6 +25,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet"> 
+        <script src="https://kit.fontawesome.com/4c2f3a8e33.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
@@ -33,12 +34,10 @@
         <div class="site">
         <div class="flexbox">
 
-        <header>
-            <div class="container">
-                <div class="logo">
-                    <h1>Taxislužby v Šali</h1>
-                </div>
-            </div>
-        </header>
+    <header>
+        <div class="logo">
+            <h1>Taxislužby v Šali</h1>  
+        </div>
+    </header>
 
         <main>
