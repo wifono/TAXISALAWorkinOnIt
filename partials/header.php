@@ -34,24 +34,10 @@
         <div class="site">
         <div class="flexbox">
 
-        <header>
-            <div class="container">
-                <div class="logo">
-                    <h1>Taxislužby v Šali</h1>  
-                    
-                <ul> 
-                    <li>
-                        <a href="#"><i id="fblogo" class="fab fa-facebook"></i></a>
-                    </li>
-
-                    <li>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                    </li>
-                </ul>
-
-            </div>
-                  
+    <header>
+        <div class="logo">
+            <h1>Taxislužby v Šali</h1>  
         </div>
-        </header>
+    </header>
 
         <main>
