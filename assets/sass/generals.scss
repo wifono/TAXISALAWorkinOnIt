@@ -201,7 +201,7 @@ h2 {
 
     text-align: center;
  
-    width: 40vw;
+    width: 25vw;
     height: 10vw;
 
     padding: 2rem;
@@ -281,151 +281,36 @@ footer {
 
 
 // MEDIA QUERRIES
-
-@media screen and (max-width:1408px) {
-
-    .logo {
-        font-size: 3em;
+@media screen and (max-width: 900px ) {
+    .taxiBox {
+        width: 85%;
     }
-    
 }
 
-@media screen and (max-width:1280px) {
+@media screen and (max-width: 596px ) {
+    .taxiBox {
+        width: 80%;
+    }
+}
 
+@media screen and (max-width: 545px ) {
     .logo {
-        font-size: 2.7em;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 451px ) {
+    .logo {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 400px ) {
+    .logo {
+        font-size: 1.5rem;
     }
 
+    .taxiBox {
+        width: 75%;
     }
-
-    @media screen and (max-width:1140px) {
-
-        .logo {
-            font-size: 2.3em;
-        }
-    
-        }
-
-
-    @media screen and (max-width:737px) { 
-
-        .taxiBox
-        
-            {
-                h2 {
-                    font-size: 2.5em;
-        }
-    }
-    }
-
-    @media screen and (max-width:664px){
-        .taxiBox {
-            h2 {
-                font-size: 2.1em;
-            }
-        }
-    }
-
-    @media screen and (max-width:658px) {
-        .logo {
-            font-size: 1.9em;
-        }
-    }
-
-    @media screen and (max-width:600px){
-        
-        .logo {
-            width: 100%;
-            position: unset;
-            height: 5em;
-        }
-
-        .flexbox {
-            flex-direction: column;
-        }
-
-        .container h1 {
-            margin-top: .5em;
-
-        }
-
-        .mainContent {
-            margin-left: 0;
-            align-items: center;
-        }
-
-        .taxiBox {
-            width: 85%;
-            padding: 1.5em;
-        }
-
-    }
-           
-
-
-
-    @media screen and (max-width:540px) {
-    
-        .taxiBox  {
-            
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-top: 0;
-        height: 20vw;
-        justify-content: space-evenly;
-
-    
-    
-        }
-
-        .taxiBox a {
-            font-size: 1.3em;
-        }
-      
-        }
-
-        @media  screen and (max-width:521px) {
-            .logo {
-                font-size:1.8em
-            }
-        }
-
-    @media screen and (max-width:455px) {
-            
-            .logo {
-            h1 {
-                font-size: 1.8em;
-            }
-        }
-    }
-
-        
-    @media screen and (max-width:383px) {
-    
-
-        .taxiBox {
-
-            h2 {
-                font-size: 2em;
-            }
-
-         a {
-            font-size: 1em;
-            margin-left: 1em;
-        }
-      
-    }
-} 
-
-@media screen and (max-width: 375px) {
-
-        .logo {
-            h1 {
-                font-size: 1.5em;
-            }
-
-            height: 3.5em;
-        }
-        
-    }
+}
