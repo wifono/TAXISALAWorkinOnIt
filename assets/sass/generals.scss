@@ -193,7 +193,7 @@ h2 {
     margin: 0;
     margin-top: 1rem;
 
-    border-radius: 1rem;
+    border-radius: .2rem;
 
     display: flex;
     flex-direction: column;
@@ -262,6 +262,62 @@ h2 {
 
 // FOOTER
 
+.infosheader {
+
+    display: flex;
+    flex-direction: row-reverse;
+    gap: .5rem;
+    align-items: baseline;
+    justify-content: flex-end;
+    
+    margin-top: 1rem;
+  
+
+    img{
+        width: 14%;
+        height:auto;
+        margin-left: 3rem;
+    }
+}
+
+.prefooter {
+    width: 100%;
+    background: #082344;
+    padding: .2rem 0 1.5rem 0;
+    color: aliceblue;
+
+    display: flex;
+   
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+
+    min-height:25vh;
+    line-height: .2rem;
+
+    border-bottom: .2em #09284d solid;
+
+    font: {
+        family: $logo-font;
+        size: 1rem;
+    }
+
+    p {
+        font: {
+            size: 2rem;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: #F5ED00;
+
+        &:hover {
+            color:#4267B2;
+        }
+    }
+}
 
 
 footer {
@@ -272,11 +328,43 @@ footer {
         font: {
             family: $logo-font;
         }
-        border-top: .2em #131311 solid;
+        border-top: .25em #061c36 solid;
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
 }
+
+.infos {
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+        font: {
+            size: 2.5em;
+            weight: 300;
+        }
+    }
+
+    align-items: center;
+    justify-content: center;
+
+    ul {
+        font: {
+            size: .98rem;
+        }
+        flex-direction: row;
+
+        margin-top: 0rem;
+    }
+
+    li {
+        list-style-type: none;
+        margin: -.6rem;
+    }
+
+}
+
 
 .mainflex {
     display: flex;
@@ -338,8 +426,21 @@ footer {
     }
 
     .mainContent {
-        margin-top: 25vh;
+        margin-top: 28vh;
     }
+
+    .banner p {
+        font-size: 1.5rem;
+    }
+
+    .infos {
+        ul{
+               font-size: 90%; 
+ 
+    }
+    }
+    
+
 }
 
 @media screen and (max-width: 451px ) {
@@ -347,7 +448,7 @@ footer {
         font-size: 1.8rem;
     }
     .mainContent {
-        margin-top: 19vh;
+        margin-top: 25vh;
     }
 }
 
@@ -356,6 +457,14 @@ footer {
     .mainContent {
         margin-top: 22vh;
     }
+
+    .infos {
+        ul{
+               font-size: 70%; 
+ 
+    }
+    }
+    
 }
 
 
@@ -365,9 +474,27 @@ footer {
     }
 
     .mainContent {
-        margin-top: 18vh;
+        margin-top: 20vh;
     }
     .taxiBox {
         width: 75%;
     }
+}
+
+@media screen and (max-width: 341px ) {
+ 
+    .banner {
+        p{
+            font-size: 1rem;
+        }
+
+    }
+
+    .infos {
+        ul{
+               font-size: 70%; 
+ 
+    }
+    }
+
 }
