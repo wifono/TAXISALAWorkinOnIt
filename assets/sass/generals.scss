@@ -371,6 +371,7 @@ footer {
     flex-direction: column;
 }
 
+
 @media screen and (max-width: 1570px ) {
     .mainContent {
         margin-top: 18%;
@@ -443,6 +444,17 @@ footer {
 
 }
 
+
+@media screen and (max-width: 488px ) {
+    .infos {
+        ul{
+               font-size: .8rem; 
+ 
+    }
+    }
+}
+
+
 @media screen and (max-width: 451px ) {
     .logo {
         font-size: 1.8rem;
@@ -460,7 +472,7 @@ footer {
 
     .infos {
         ul{
-               font-size: 70%; 
+               font-size: .7rem; 
  
     }
     }
@@ -481,18 +493,29 @@ footer {
     }
 }
 
+
+@media screen and (max-width: 353px ) {
+
+    .infos {
+        ul{
+               font-size: .65rem; 
+ 
+    }
+    }
+}
+
 @media screen and (max-width: 341px ) {
  
     .banner {
         p{
-            font-size: 1rem;
+            font-size: 1.2rem;
         }
 
     }
 
     .infos {
         ul{
-               font-size: 70%; 
+               font-size: .6rem; 
  
     }
     }
