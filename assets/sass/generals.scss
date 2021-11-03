@@ -59,6 +59,8 @@ header {
     flex-direction: column;
     background: #061c36;
     border-bottom: .2rem solid #131311;
+    position: fixed;
+    top: 0;
 }
 
 .logo {
@@ -92,6 +94,7 @@ h1 {
     padding-right: .5em;
 
     border-bottom: .03em #F5ED00 solid;
+    
 
    
 }
@@ -105,7 +108,7 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
 
-    margin-top: 2em;
+    margin-top: 15%;
 }
 
 h2 {
@@ -206,11 +209,13 @@ h2 {
 
     padding: 2rem;
 
-    cursor: pointer;
+    cursor: pointer; 
+    user-select: none;
 
 
     h2 {
         color: #131311;
+       
     }
 
 
@@ -278,12 +283,46 @@ footer {
     flex-direction: column;
 }
 
+@media screen and (max-width: 1570px ) {
+    .mainContent {
+        margin-top: 18%;
+    }
+}
 
+@media screen and (max-width: 1250px ) {
+    .mainContent {
+        margin-top: 21%;
+    }
+}
+
+@media screen and (max-width: 1198px ) {
+    .mainContent {
+        margin-top: 25%;
+    }
+}
+
+@media screen and (max-width: 1023px ) {
+    .mainContent {
+        margin-top: 30%;
+    }
+}
 
 // MEDIA QUERRIES
 @media screen and (max-width: 900px ) {
     .taxiBox {
         width: 85%;
+    }
+}
+
+@media screen and (max-width: 800px ) {
+    .mainContent {
+        margin-top: 35%;
+    }
+}
+
+@media screen and (max-width: 623px ) {
+    .mainContent {
+        margin-top: 40%;
     }
 }
 
@@ -297,19 +336,37 @@ footer {
     .logo {
         font-size: 2rem;
     }
+
+    .mainContent {
+        margin-top: 25vh;
+    }
 }
 
 @media screen and (max-width: 451px ) {
     .logo {
         font-size: 1.8rem;
     }
+    .mainContent {
+        margin-top: 19vh;
+    }
 }
+
+@media screen and (max-width: 412px ) {
+
+    .mainContent {
+        margin-top: 22vh;
+    }
+}
+
 
 @media screen and (max-width: 400px ) {
     .logo {
         font-size: 1.5rem;
     }
 
+    .mainContent {
+        margin-top: 18vh;
+    }
     .taxiBox {
         width: 75%;
     }

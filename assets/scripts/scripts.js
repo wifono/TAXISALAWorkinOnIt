@@ -3,14 +3,12 @@
     let box = document.getElementsByClassName('taxiBox');
     let number = document.getElementsByClassName('number');
 
-    $(document).ready(function () { $(number).hide();})
+    $(document).ready(function () { $(number).hide(); });
 
     $(box).click(function(event) {
-        let box = event.target;
+        let box = $(this).add("h2");
         let boxNum = $(box).children(".number");
-
-    
-    $(boxNum).toggle(100);  
+        
+    $(boxNum).stop().toggle(100); 
 });
-
 }) (jQuery)

@@ -32,7 +32,9 @@ header {
   justify-content: center;
   flex-direction: column;
   background: #061c36;
-  border-bottom: .2rem solid #131311; }
+  border-bottom: .2rem solid #131311;
+  position: fixed;
+  top: 0; }
 
 .logo {
   font-family: "Bebas Neue", cursive;
@@ -57,7 +59,7 @@ h1 {
   gap: 1em;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 2em; }
+  margin-top: 15%; }
 
 h2 {
   font-family: "Bebas Neue", cursive;
@@ -112,7 +114,8 @@ h2 {
   width: 25vw;
   height: 10vw;
   padding: 2rem;
-  cursor: pointer; }
+  cursor: pointer;
+  user-select: none; }
   .taxiBox h2 {
     color: #131311; }
   .taxiBox a {
@@ -152,21 +155,51 @@ footer {
   display: flex;
   flex-direction: column; }
 
+@media screen and (max-width: 1570px) {
+  .mainContent {
+    margin-top: 18%; } }
+@media screen and (max-width: 1250px) {
+  .mainContent {
+    margin-top: 21%; } }
+@media screen and (max-width: 1198px) {
+  .mainContent {
+    margin-top: 25%; } }
+@media screen and (max-width: 1023px) {
+  .mainContent {
+    margin-top: 30%; } }
 @media screen and (max-width: 900px) {
   .taxiBox {
     width: 85%; } }
+@media screen and (max-width: 800px) {
+  .mainContent {
+    margin-top: 35%; } }
+@media screen and (max-width: 623px) {
+  .mainContent {
+    margin-top: 40%; } }
 @media screen and (max-width: 596px) {
   .taxiBox {
     width: 80%; } }
 @media screen and (max-width: 545px) {
   .logo {
-    font-size: 2rem; } }
+    font-size: 2rem; }
+
+  .mainContent {
+    margin-top: 25vh; } }
 @media screen and (max-width: 451px) {
   .logo {
-    font-size: 1.8rem; } }
+    font-size: 1.8rem; }
+
+  .mainContent {
+    margin-top: 19vh; } }
+@media screen and (max-width: 412px) {
+  .mainContent {
+    margin-top: 22vh; } }
 @media screen and (max-width: 400px) {
   .logo {
     font-size: 1.5rem; }
+
+  .mainContent {
+    margin-top: 18vh; }
 
   .taxiBox {
     width: 75%; } }
