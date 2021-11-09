@@ -1,31 +1,31 @@
 // VARIABLES
 
-$background-color: #131311;
-$main-color: #1010101b;
-$second-color: #afafaf;
-$navig-color: rgba(31, 31, 31, 0.898);
+$background-color: #1b1b1b;
+$main-color: #2c2c2c;
+$white-bg: rgb(238, 238, 238);
+$gray: rgb(206, 206, 206);
 
-$font-main-color: rgb(17, 17, 17);
+$font-main-color: rgb(43, 43, 43);
+$fontSecondaryColor: aliceblue;
+$hover: #01bbc2;
 
-$logo-color: rgb(243, 239, 0);
+$logo-color: #f5ed00;
 
-$logo-font:'Bebas Neue', cursive; 
-$font: 'Open Sans', sans-serif;
-
+$logo-font: "Bebas Neue", cursive;
+$font: "Open Sans", sans-serif;
 
 // GENERALS
 
 body {
     margin: 0;
     padding: 0;
-    background: #F5ED00;
+    background: $white-bg;
     display: flex;
     justify-content: center;
     min-height: 100vh;
 
     font-family: $font;
-    font-size: .9em;
-    
+    font-size: 0.9em;
 }
 
 .flexbox {
@@ -35,271 +35,197 @@ body {
     align-items: center;
 }
 
-.container h1, .navigation {
+.container {
     display: flex;
-    flex-direction: column;
-    height: min-content;
-    
-    margin-top: -5em;
-
-
-}
-
-ul {
-    display: flex;
-    gap: 2em;
-    padding: 0;
-}
-
-header {
-    display: flex;
-    width: 100%;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    background: #061c36;
-    border-bottom: .2rem solid #131311;
-    position: fixed;
-    top: 0;
-}
-
-.logo {
-    
-    font-family: $logo-font;
-    font-size: 2.5rem;
-
-  
 }
 
 .site {
     width: 100vw;
+    margin: 0;
+}
+
+// HEADER
+header {
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
 
     background: $main-color;
-    
-
-    margin: 0;
-
+    border-bottom: 0.1rem solid #131311;
 }
+
+.logo {
+    font-family: $logo-font;
+    font-size: 1.1rem;
+}
+
 // TYPOGRAPHY
 
 h1 {
-   // background:    linear-gradient(186deg, darken($second-color, 8%) 75.5%, rgb(239, 239, 239) 100%);
-    color: #F5ED00;
-  //box-shadow: darken($main-color, 100%) 0em .2em .1em;
- 
-  font-weight: 300;
-       
-    padding-top:.20em;
-    padding-left:.5em;
-    padding-right: .5em;
+    color: $fontSecondaryColor;
 
-    border-bottom: .03em #F5ED00 solid;
-    
+    border-top: 0.03em $fontSecondaryColor solid;
+    border-bottom: 0.03em $fontSecondaryColor solid;
 
-   
+    padding-top: 0.25rem;
+    font-weight: 300;
+}
+
+// SOCIALS NAVIGATION
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    li {
+        list-style-type: none;
+        margin: 1rem;
+    }
+
+    a {
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: $fontSecondaryColor;
+        transition: all 0.2s ease-in-out;
+
+        &:hover &:active {
+            color: $hover;
+        }
+    }
+}
+
+#fblogo:hover,
+#fblogo:active {
+    color: $hover;
+    transition: 0.2s all ease-in-out;
 }
 
 .mainContent {
+    width: 70%;
+
     display: flex;
     flex-direction: row;
-    
-    gap: 1em;
-    
     flex-wrap: wrap;
     justify-content: center;
+    gap: 3em;
 
-    margin-top: 15%;
+    margin: 5rem 0 5rem 0;
 }
 
 h2 {
     font: {
         family: $logo-font;
-        weight: 400 ;
+        weight: 400;
         size: 2.2rem;
     }
     margin: 0;
-  
 }
-
-
-// SOCIAL ICONS
-
-.logo li {
-    list-style-type: none;
-}
-
-
-.logo a {
-    color:  $navig-color;
-}
-
-#fblogo:hover {
-    color:  #4267B2;
-    transition: .5s all ease-in;
-}
-
-.logo a:hover {
-    color: #131311;
-    transition: .5s all ease-in;
-}
-
-
-// NAVIGATION
-
-.socials li {
-    list-style-type: none;
-
-
-    a {
-        color: lighten($font-main-color, 70%);
-        text-decoration: none;
-        
-     
-    }
-
-    a:hover {
-        color: lighten($font-main-color, 90%);
-    }
-
-    font-size: 1.8em;
-
-
-}
-
-.navigation {
-    background: $navig-color;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    z-index: 20;
-
-
-    
-.active {
-    
-    color: $second-color;
-}
-}
-
-
-
 
 // BOXES
 
 .taxiBox {
-    
-    background: rgba(155, 155, 155, 0.253);
+    background: $gray;
     margin: 0;
-    margin-top: 1rem;
-
-    border-radius: .2rem;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
     color: $font-main-color;
 
     text-align: center;
- 
-    width: 25vw;
-    height: 10vw;
+
+    width: 15rem;
+    height: 4rem;
 
     padding: 2rem;
 
-    cursor: pointer; 
+    cursor: pointer;
     user-select: none;
-
-
-    h2 {
-        color: #131311;
-       
-    }
-
-
-  a {
-      text-decoration: none;
-      color: $font-main-color;
-
-      font: {
-          weight: 100;
-          size: 1.5em;
-      }
-}
-
-
-}   
-    .order {
-        opacity: 1;
-    }
-
-    .isvisible {
-        opacity: 1;
-    }
-
-.taxiBox:hover {
-
-
-    background: #061c36f1;
-
-    opacity: 1;
-    color: lighten($font-main-color, 15%);
-    transition: .4s;
-    animation: ease-in;
+    transition: all ease-in-out 0.2s;
 
     h2 {
-        color:#F5ED00;
+        color: $font-main-color;
     }
 
     a {
-        color: aliceblue;
+        text-decoration: none;
+        color: $font-main-color;
+
+        font: {
+            weight: 100;
+            size: 1.5em;
+        }
+    }
+
+    &:hover,
+    &:active {
+        background: $main-color;
+
+        opacity: 1;
+        color: lighten($font-main-color, 15%);
+
+        h2 {
+            color: $hover;
+        }
+
+        a {
+            color: $fontSecondaryColor;
+        }
     }
 }
 
-
-
 // FOOTER
 
-.infosheader {
+footer {
+    margin-top: 2rem;
+    background: rgb(206, 206, 206);
+    padding: 0.02em 0 6rem 0;
 
-    display: flex;
-    flex-direction: row-reverse;
-    gap: .5rem;
-    align-items: baseline;
-    justify-content: flex-end;
-    
-    margin-top: 1rem;
-  
-
-    img{
-        width: 14%;
-        height:auto;
-        margin-left: 3rem;
+    font: {
+        family: $logo-font;
     }
+
+    border-top: 0.25em darken($main-color, 20%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    user-select: none;
 }
 
 .prefooter {
     width: 100%;
-    background: #082344;
-    padding: .2rem 0 1.5rem 0;
-    color: aliceblue;
+    color: $font-main-color;
+
+    background: url("../images/logo2.png") no-repeat;
+
+    background-position: fixed;
+    background-position-x: 58vw;
+    background-size: 41rem;
+    overflow: hidden;
 
     display: flex;
-   
+
     justify-content: center;
     flex-direction: column;
-    align-items: center;
-    
+    align-items: flex-start;
 
-    min-height:25vh;
-    line-height: .2rem;
-
-    border-bottom: .2em #09284d solid;
+    min-height: 25rem;
 
     font: {
-        family: $logo-font;
         size: 1rem;
     }
 
@@ -311,213 +237,260 @@ h2 {
 
     a {
         text-decoration: none;
-        color: #F5ED00;
+        color: #4267b2;
+        transition: all 0.5s ease-in-out;
 
-        &:hover {
-            color:#4267B2;
+        &:hover,
+        &:active {
+            color: $hover;
         }
     }
 }
 
+.infosheader {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.5rem;
+    align-items: baseline;
+    justify-content: flex-end;
 
-footer {
-    margin-top: 2rem;
-        background: #061c36;
-        padding: .02em;
+    margin-left: 10rem;
 
-        font: {
-            family: $logo-font;
-        }
-        border-top: .25em #061c36 solid;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+    img {
+        width: 14%;
+        height: auto;
+        margin-left: 4px;
+    }
+}
+
+.banner {
+    margin-left: 10rem;
+    width: 100%;
+
+    p {
+        font-size: 2.5rem;
+    }
 }
 
 .infos {
     display: flex;
     flex-direction: column;
+    margin: 3rem 0 2rem 0;
+    margin-left: 10rem;
 
     h3 {
+        color: #4267b2;
         font: {
-            size: 2.5em;
+            size: 3.5rem;
             weight: 300;
         }
     }
 
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: baseline;
 
     ul {
         font: {
-            size: .98rem;
+            size: 0.98rem;
         }
-        flex-direction: row;
+        display: flex;
+        gap: 0.5rem;
 
-        margin-top: 0rem;
+        margin-top: -4rem;
+        margin-left: 9.7rem;
     }
 
     li {
         list-style-type: none;
-        margin: -.6rem;
     }
-
 }
 
+.description {
+    width: 40.5rem;
+    text-align: justify;
+    line-height: 2.2rem;
+    margin-left: 10vw;
+
+    p {
+        font: {
+            size: 1.5rem;
+        }
+    }
+}
 
 .mainflex {
     display: flex;
     flex-direction: column;
 }
 
+.taxiBoxAdmin {
+    background: rgb(206, 206, 206);
+    margin: 0;
+    gap: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-@media screen and (max-width: 1570px ) {
-    .mainContent {
-        margin-top: 18%;
+    color: $font-main-color;
+
+    text-align: center;
+
+    width: 25rem;
+    height: 5rem;
+
+    padding: 2rem;
+
+    cursor: pointer;
+    user-select: none;
+    transition: all ease-in-out 0.2s;
+
+    h2 {
+        color: $font-main-color;
+    }
+
+    a {
+        text-decoration: none;
+        color: $font-main-color;
+
+        font: {
+            weight: 100;
+            size: 1.5em;
+        }
+    }
+
+    &:hover,
+    &:active {
+        background: $main-color;
+
+        opacity: 1;
+        color: lighten($font-main-color, 15%);
+
+        h2 {
+            color: $hover;
+        }
+
+        a {
+            color: $fontSecondaryColor;
+        }
     }
 }
 
-@media screen and (max-width: 1250px ) {
-    .mainContent {
-        margin-top: 21%;
+.controls {
+
+
+
+    li {
+        line-height: 2rem;
+        list-style-type: none;
+
+        a {
+            &:hover &:active {
+                color: $hover;
+                transition: all 0.3s ease-in-out;
+            }
+        }
     }
 }
 
-@media screen and (max-width: 1198px ) {
-    .mainContent {
-        margin-top: 25%;
+// ADD TAXI
+
+.addTaxi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 6rem;
+
+    font-family: $font;
+    font-weight: 600;
+    background: $gray;
+    width: 100%;
+
+    input,
+    button {
+        background-color: darken($gray, 5%);
+        border: none;
+        height: 2rem;
+        border-radius: 0.1rem;
+    }
+
+    input {
+        padding: 0.1rem.5rem;
+        text-align: center;
+    }
+
+    label {
+        margin-left: 1rem;
+    }
+
+    button {
+        width: 5rem;
+        height: 2.5rem;
+        background-color: darken($gray, 10%);
+        font-weight: 600;
+        margin-left: 5rem;
+
+        &:hover,
+        &:active {
+            background-color: $hover;
+            transition: all 0.3s ease-in-out;
+        }
     }
 }
 
-@media screen and (max-width: 1023px ) {
-    .mainContent {
-        margin-top: 30%;
+.addIcon {
+    font-size: 1.5rem;
+    padding: 0.75rem;
+
+    a {
+        text-decoration: none;
+        color: darken($gray, 50%);
+
+        &:hover,
+        &:active {
+            color: $hover;
+            transition: all 0.3s ease-in-out;
+        }
     }
 }
 
-// MEDIA QUERRIES
-@media screen and (max-width: 900px ) {
-    .taxiBox {
-        width: 85%;
-    }
-}
 
-@media screen and (max-width: 800px ) {
-    .mainContent {
-        margin-top: 35%;
-    }
-}
+.loginform {
 
-@media screen and (max-width: 623px ) {
-    .mainContent {
-        margin-top: 40%;
-    }
-}
+    width: 25rem;
+    height: 20rem;
 
-@media screen and (max-width: 596px ) {
-    .taxiBox {
-        width: 80%;
-    }
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $font;
+    background: darken($gray, 10%);
 
-@media screen and (max-width: 545px ) {
-    .logo {
-        font-size: 2rem;
-    }
+    input {
+        color: darken($gray,50%);
+        background: darken( $gray, 20%);
+        border: none;
+        margin: 1rem 0;
+        padding: .5rem;
 
-    .mainContent {
-        margin-top: 28vh;
-    }
+        &:last-child {
+            font-weight: 600;
 
-    .banner p {
-        font-size: 1.5rem;
-    }
-
-    .infos {
-        ul{
-               font-size: 90%; 
+            &:hover,
+            &:active {
+                background-color: $hover;
+                transition: all 0.3s ease-in-out;
+            }
  
-    }
-    }
-    
-
-}
-
-
-@media screen and (max-width: 488px ) {
-    .infos {
-        ul{
-               font-size: .8rem; 
- 
-    }
-    }
-}
-
-
-@media screen and (max-width: 451px ) {
-    .logo {
-        font-size: 1.8rem;
-    }
-    .mainContent {
-        margin-top: 25vh;
-    }
-}
-
-@media screen and (max-width: 412px ) {
-
-    .mainContent {
-        margin-top: 22vh;
-    }
-
-    .infos {
-        ul{
-               font-size: .7rem; 
- 
-    }
-    }
-    
-}
-
-
-@media screen and (max-width: 400px ) {
-    .logo {
-        font-size: 1.5rem;
-    }
-
-    .mainContent {
-        margin-top: 20vh;
-    }
-    .taxiBox {
-        width: 75%;
-    }
-}
-
-
-@media screen and (max-width: 353px ) {
-
-    .infos {
-        ul{
-               font-size: .65rem; 
- 
-    }
-    }
-}
-
-@media screen and (max-width: 341px ) {
- 
-    .banner {
-        p{
-            font-size: 1.2rem;
+        } &:hover,
+        &:active {
+            background-color: $hover;
+            transition: all 0.3s ease-in-out;
         }
 
     }
 
-    .infos {
-        ul{
-               font-size: .6rem; 
- 
+    label {
+        font-weight: 600;
     }
-    }
-
 }
