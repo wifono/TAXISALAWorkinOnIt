@@ -16,12 +16,14 @@
         if($row["usertype"] == "user"){
             $_SESSION['username']= $username;
             $_SESSION['password']= $password;
+            $_SESSION['usertype']= $row["usertype"];
     
             header("Location:index.php");
         }else if($row["usertype"] == "admin"){
             $_SESSION['username']= $username;
             $_SESSION['password']= $password;
-            header("Location:admin.php?$username");
+            $_SESSION['usertype']= $row["usertype"];
+            header("Location:admin.php");
         }else {
             echo "<script type='text/javascript'>";
             echo "Invalid username or password.";

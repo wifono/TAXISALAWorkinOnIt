@@ -1,5 +1,4 @@
 <?php 
-
     session_start();
 ?>
 
@@ -35,14 +34,16 @@
         <h1>Taxislužby v Šali</h1>  
     </div>
 
-    <div class="username">
-        <h2><?php echo $_SESSION["username"] ?></h2>
-    </div>
+
 
     <?php 
     if(isset($_SESSION["username"]) && $_SESSION["username"] == true) {
      ?>   
 
+    <div class="username">
+        <h2><?php echo $_SESSION["username"] ?></h2>
+    </div>
+    
     <div id="logout" class="logout">
         <a href="logout.php">Log out</a>
     </div>
