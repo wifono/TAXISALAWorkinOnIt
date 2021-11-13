@@ -1,5 +1,6 @@
 <?php 
    session_start();
+   global $data;
 
    $data = mysqli_connect("localhost","root","941000023870268","freonnet_admin_users");
 

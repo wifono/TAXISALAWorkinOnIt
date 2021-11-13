@@ -1,6 +1,6 @@
 <?php
     session_start();
-   ?>
+?>
 
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -36,7 +36,7 @@
         <h2><?php echo $_SESSION["username"] ?></h2>
         
     </div>
-<h2><?php echo $_SESSION["usertype"]?></h2>
+
     <div class="logout">
         <a href="logout.php">Log out</a>
     </div>
@@ -56,23 +56,12 @@
 </header>
 
 <?php 
-
-    //If this page needs admin access then put this code
     if( $_SESSION['usertype']=='admin'){
-    
-        include "partials/controlpanel.php";
-    
-    }
-    else{
+        include_once "partials/controlpanel.php";    
+    } else {
         header("Location:index.php");
     }
-
-
 ?>
-
-
-
-
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
