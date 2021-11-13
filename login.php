@@ -1,13 +1,14 @@
 <?php 
    session_start();
    global $data;
+   global $row;
 
    $data = mysqli_connect("localhost","root","941000023870268","freonnet_admin_users");
 
 
 
-    if($_SERVER["REQUEST_METHOD"]=='POST') {
-
+    if(isset($_POST["login"])) {
+        
         $username = $_POST["username"];
         $password = $_POST["password"];
 
@@ -24,6 +25,7 @@
             $_SESSION['username']= $username;
             $_SESSION['password']= $password;
             $_SESSION['usertype']= $row["usertype"];
+            
             header("Location:admin.php");
         }else {
             echo "<script type='text/javascript'>";
@@ -80,7 +82,7 @@
         <section class="mainContent">
 
             <div class="loginform">
-                <form id="loginform" action="#" method="post">
+                <form id="loginform" action="login.php" method="post">
                     <label for="username">Username</label><br>
                     <input type="text" placeholder="Username" name="username" required><br>
 

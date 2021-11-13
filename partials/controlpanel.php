@@ -20,15 +20,16 @@ function CreateTaxi() {
 }
 
 if(isset($_POST['deletetaxi'])){
-    global $taxiid;
-    $id=$taxiid;
+   
+   
+    $id=$_POST['deleteid'];
 
     $connection = mysqli_connect("localhost","root","941000023870268","freonnet_admin_users");
 
-    $query2 = " DELETE FROM taxi_database WHERE id = '$id'; ";
+    $query2 = "DELETE FROM taxi_database WHERE id = '$id'";
     $result2 = mysqli_query($connection, $query2);
     if($result2){
-        echo "deleted";
+        echo $id;
     } else {
                 die('error dpč');
     }
@@ -52,7 +53,7 @@ if(isset($_POST["submit"])){
 
 <div class="controlpanel">
         <div class="addTaxi">
-            <form action="#" method="post">
+            <form action="admin.php" method="post">
                 <label for="taxiname">Názov Taxislužby</label>
                 <input name="taxiname" type="text">
                 <label for="taxinumber">Číslo Taxislužby</label>
