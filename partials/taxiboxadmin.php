@@ -5,7 +5,7 @@
     $taxinumber = $row['taxinumber'];
 
 
- echo '<div id="'.$taxiid.'" class="taxiBoxAdmin">
+ echo '<div class="taxiBoxAdmin" id="'.$taxiid.'">
 <h2>'.$taxiname.'</h2>
 <a class="number" href="tel:'.$taxinumber.'"]>'.$taxinumber.'</a>
 
@@ -18,5 +18,15 @@
         </ul>
 </form>
 </div>
-</div>';
+
+
+</div>
+<form action="admin.php" method="post"></form>
+<div id="'.$taxiid.'" class="editmodal editmodal'.$taxiid.'">
+<h2>'.$taxiname.'</h2>
+<input placeholder="'.$taxiname.'" value="'.$taxiname.'"></input>
+<input placeholder="'.$taxinumber.'" value="'.$taxinumber.'"></input>
+<input type="button" name="edit" value="Edit"></input>
+</div>
+</form>';
 ?>

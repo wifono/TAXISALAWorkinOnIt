@@ -57,11 +57,63 @@ header {
 
     background: $main-color;
     border-bottom: 0.1rem solid #131311;
-}
 
-.logo {
+    h2 {
+        color: $logo-color;
+        font-size: 1.5rem;
+        align-self: flex-end;
+    }
+    
+    .logo {
     font-family: $logo-font;
     font-size: 1.1rem;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.logout,
+.login {
+    
+    a {
+        text-decoration: none;
+        color: $gray;
+        font-family: $logo-font;
+        font-size: 1.5rem;
+
+        &:hover {
+            color: $hover;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}
+
+.account {
+    position: absolute;
+    left: 92vw;
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+    font-weight: 600;
+    font-family: $font;
+    text-transform: uppercase;
+    
+    a{
+        text-decoration: none;
+        color: $fontSecondaryColor;
+
+        &:hover {
+            color: $hover;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}
+
 }
 
 // TYPOGRAPHY
@@ -437,6 +489,10 @@ footer {
             transition: all 0.3s ease-in-out;
         }
     }
+
+    form {
+        margin: 0;
+    }
 }
 
 .addIcon {
@@ -493,5 +549,32 @@ footer {
 
     label {
         font-weight: 600;
+    }
+}
+
+// MODAL OVER
+
+.editmodal {
+    position: fixed;
+    background:$background-color;
+    width: 45vw;
+    height: 25vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    box-shadow: 0 0 20rem $background-color;
+
+    h2 {
+        color: $fontSecondaryColor;
+    }
+
+    input {
+        background: $gray;
+        font-weight: 600;
+        border: none;
+        height:1.6rem;
     }
 }

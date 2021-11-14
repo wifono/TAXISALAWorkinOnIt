@@ -15,7 +15,7 @@ function CreateTaxi() {
     $result = mysqli_query($data, $guery);
 
     if(!$result){
-        die("Error");
+        die('ERROR, contact daniel.trstansky@gmail.com please');
     }    
 }
 
@@ -29,13 +29,10 @@ if(isset($_POST['deletetaxi'])){
     $query2 = "DELETE FROM taxi_database WHERE id = '$id'";
     $result2 = mysqli_query($connection, $query2);
     if($result2){
-        echo $id;
+       
     } else {
-                die('error dpč');
+                die('ERROR, contact daniel.trstansky@gmail.com please');
     }
-
-    
-
 };
 
 
@@ -77,7 +74,7 @@ function ReadTaxi(){
     $result = mysqli_query($data, $query);
    
     if(!$result){
-        die("error");
+        die('ERROR, contact daniel.trstansky@gmail.com please');
     }
     if(mysqli_num_rows($result) > 0) {
         

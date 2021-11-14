@@ -32,10 +32,42 @@ header {
   flex-direction: row;
   background: #2c2c2c;
   border-bottom: 0.1rem solid #131311; }
-
-.logo {
-  font-family: "Bebas Neue", cursive;
-  font-size: 1.1rem; }
+  header h2 {
+    color: #f5ed00;
+    font-size: 1.5rem;
+    align-self: flex-end; }
+  header .logo {
+    font-family: "Bebas Neue", cursive;
+    font-size: 1.1rem; }
+    header .logo a {
+      text-decoration: none; }
+  header .logout a,
+  header .login a {
+    text-decoration: none;
+    color: #cecece;
+    font-family: "Bebas Neue", cursive;
+    font-size: 1.5rem; }
+    header .logout a:hover,
+    header .login a:hover {
+      color: #01bbc2;
+      transition: all 0.3s ease-in-out; }
+  header .account {
+    position: absolute;
+    left: 92vw;
+    text-align: center; }
+  header ul {
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+    font-weight: 600;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase; }
+    header ul a {
+      text-decoration: none;
+      color: aliceblue; }
+      header ul a:hover {
+        color: #01bbc2;
+        transition: all 0.3s ease-in-out; }
 
 h1 {
   color: aliceblue;
@@ -267,6 +299,8 @@ footer {
     .addTaxi button:hover, .addTaxi button:active {
       background-color: #01bbc2;
       transition: all 0.3s ease-in-out; }
+  .addTaxi form {
+    margin: 0; }
 
 .addIcon {
   font-size: 1.5rem;
@@ -302,5 +336,23 @@ footer {
       transition: all 0.3s ease-in-out; }
   .loginform label {
     font-weight: 600; }
+
+.editmodal {
+  position: fixed;
+  background: #1b1b1b;
+  width: 45vw;
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  box-shadow: 0 0 20rem #1b1b1b; }
+  .editmodal h2 {
+    color: aliceblue; }
+  .editmodal input {
+    background: #cecece;
+    font-weight: 600;
+    border: none;
+    height: 1.6rem; }
 
 /*# sourceMappingURL=generals.css.map */

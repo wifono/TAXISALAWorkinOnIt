@@ -28,7 +28,42 @@
     $(plusButton).on('click', function (e) {
         e.preventDefault();
         $(addBox).slideToggle(300);
-    })
+    });
 
+
+  var taxiBoxAdmin = $('.taxiBoxAdmin');
+  var editModal = $('.editmodal');
+
+  $(document).ready(function () {
+    $(editModal).hide();
+
+});
+
+$(taxiBoxAdmin).on('click', function (e){
+        let id = $(e.target).attr('id');
+        console.log($('.editModal').attr('id'));
+        
+        $('.editmodal'+id).slideToggle();
+
+
+        $('body').on('click', function (){
+    
+            var id = $('.editmodal').attr('id'); 
+            console.log(id);
+            if($('.editmodal').is(':visible')){
+                $('.editmodal').fadeOut();
+            
+        }});
+        
+    });
+
+$('body').on('click', function (){
+    
+    var id = $('.editmodal').attr('id'); 
+    console.log(id);
+    if (!$('body').closest(".editmodal").length) {
+        $("body").find(".editmodal").fadeOut();
+      
+}});
 
 })(jQuery)
