@@ -1,15 +1,13 @@
 (function ($) {
 
-    let box = $('.taxiBox').children("h2");
+    let box = document.getElementsByClassName('taxiBox');
     let number = document.getElementsByClassName('number');
     let adminTaxiBoxNumber = $('.taxiBoxAdmin').children('.number');
-
+    
     $(document).ready(function () { $(number).hide(); adminTaxiBoxNumber.show(); });
 
-
-    $(box).click(function () {
-        let box = $(this);
-
+    $(box).click(function (e) {
+        let box = $(this).add("h2");
         let boxNum = $(box).children(".number");
 
         $(boxNum).stop().toggle(100);
@@ -49,8 +47,9 @@ $(taxiBoxAdmin).on('click', function (e) {
 });
 
 $(taxiName).on('click', function (e) {
-    e.stopPropagation();
     var id = $(e.target).parents('.taxiBoxAdmin').attr('id');
+    let boxNum = $(box).children(".number");
+
     $('.editmodal'+id).slideToggle(300);
 })
 
@@ -61,8 +60,5 @@ $(document).mouseup(function (e) {
         editmodal.hide();
     }
 })
-
-
-
 
 })(jQuery)
