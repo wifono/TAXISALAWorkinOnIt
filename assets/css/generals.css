@@ -339,7 +339,7 @@ footer {
 
 .editmodal {
   position: fixed;
-  background: #1b1b1b;
+  background: rgba(27, 27, 27, 0.9);
   width: 45vw;
   height: 25vh;
   display: flex;
@@ -354,5 +354,18 @@ footer {
     font-weight: 600;
     border: none;
     height: 1.6rem; }
+
+.registerform {
+  width: 35rem;
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .registerform form {
+    display: flex;
+    flex-direction: column; }
+  .registerform input {
+    margin-bottom: .5rem; }
 
 /*# sourceMappingURL=generals.css.map */

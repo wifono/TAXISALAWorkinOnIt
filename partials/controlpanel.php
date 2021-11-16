@@ -1,17 +1,29 @@
-
 <?php 
 
+if( $_SESSION['usertype']=='admin'){
+    include_once "partials/controlpanel.php";    
+} else {
+    header("Location:error.php");
+    die();
+}
+
 global $data;
+global $connection;
 
 $data = mysqli_connect("localhost","root","941000023870268","freonnet_admin_users");
 
 function CreateTaxi() {
     global $data;
+    global $taxiname;
+    global $taxinumber;
 
     $taxiname = $_POST["taxiname"];
     $taxinumber = $_POST["taxinumber"]; 
-    $guery = "INSERT INTO taxi_database (taxiname, taxinumber) VALUES ('$taxiname', '$taxinumber')";
 
+    $taxiname = mysqli_real_escape_string($data,$taxiname);
+    $taxinumber = mysqli_real_escape_string($data,$taxinumber);
+
+    $guery = "INSERT INTO taxi_database (taxiname, taxinumber) VALUES ('$taxiname', '$taxinumber')";
     $result = mysqli_query($data, $guery);
 
     if(!$result){
@@ -20,7 +32,6 @@ function CreateTaxi() {
 }
 
 if(isset($_POST['deletetaxi'])){
-   
    
     $id=$_POST['deleteid'];
 
@@ -35,12 +46,9 @@ if(isset($_POST['deletetaxi'])){
     }
 };
 
-
 if(isset($_POST["submit"])){
     CreateTaxi();
 }
-
-
 ?>
 
 <div id="addIcon" class="addIcon">

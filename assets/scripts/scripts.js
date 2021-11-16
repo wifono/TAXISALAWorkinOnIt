@@ -1,13 +1,15 @@
 (function ($) {
 
-    let box = document.getElementsByClassName('taxiBox');
+    let box = $('.taxiBox').children("h2");
     let number = document.getElementsByClassName('number');
     let adminTaxiBoxNumber = $('.taxiBoxAdmin').children('.number');
 
     $(document).ready(function () { $(number).hide(); adminTaxiBoxNumber.show(); });
 
-    $(box).click(function (event) {
-        let box = $(this).add("h2");
+
+    $(box).click(function () {
+        let box = $(this);
+
         let boxNum = $(box).children(".number");
 
         $(boxNum).stop().toggle(100);
@@ -30,40 +32,37 @@
         $(addBox).slideToggle(300);
     });
 
-
-  var taxiBoxAdmin = $('.taxiBoxAdmin');
   var editModal = $('.editmodal');
-
-  $(document).ready(function () {
-    $(editModal).hide();
+  $(document).ready(function (e) {
+    $(editModal).hide(); 
 
 });
-
-$(taxiBoxAdmin).on('click', function (e){
-        let id = $(e.target).attr('id');
-        console.log($('.editModal').attr('id'));
-        
-        $('.editmodal'+id).slideToggle();
-
-
-        $('body').on('click', function (){
     
-            var id = $('.editmodal').attr('id'); 
-            console.log(id);
-            if($('.editmodal').is(':visible')){
-                $('.editmodal').fadeOut();
-            
-        }});
-        
-    });
 
-$('body').on('click', function (){
-    
-    var id = $('.editmodal').attr('id'); 
-    console.log(id);
-    if (!$('body').closest(".editmodal").length) {
-        $("body").find(".editmodal").fadeOut();
-      
-}});
+let taxiBoxAdmin = $('.taxiBoxAdmin');
+let taxiName = $('h2')
+
+$(taxiBoxAdmin).on('click', function (e) {
+    e.stopPropagation();
+    var id = $(e.target).attr('id');
+    $('.editmodal'+id).slideToggle(300);
+});
+
+$(taxiName).on('click', function (e) {
+    e.stopPropagation();
+    var id = $(e.target).parents('.taxiBoxAdmin').attr('id');
+    $('.editmodal'+id).slideToggle(300);
+})
+
+$(document).mouseup(function (e) {
+    var editmodal = $('.editmodal');
+    //ak target nie je objekt na ktorý sa kliklo, ani jeho potomok
+    if(!editmodal.is(e.target) && editmodal.has(e.target).length === 0) {
+        editmodal.hide();
+    }
+})
+
+
+
 
 })(jQuery)

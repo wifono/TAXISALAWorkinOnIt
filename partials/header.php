@@ -3,8 +3,6 @@
         <a href="index.php"><h1>Taxislužby v Šali</h1> </a> 
     </div>
 
-
-
     <?php 
     if(isset($_SESSION["username"]) && $_SESSION["username"] == true) {
      ?>   
@@ -25,7 +23,6 @@
     }else; 
     
     if(!isset($_SESSION["username"])){
-        
     ?>
         
         <div class="account">
@@ -49,9 +46,6 @@
             } else;
         ?>
 
-    
-    
-    
     <div class="socials">
         <ul> 
             <li>

@@ -5,13 +5,12 @@
     include "partials/header.php";
 ?>
 
-
-
 <?php 
     if( $_SESSION['usertype']=='admin'){
         include_once "partials/controlpanel.php";    
     } else {
         header("Location:index.php");
+        die();
     }
 ?>
 

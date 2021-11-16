@@ -556,7 +556,7 @@ footer {
 
 .editmodal {
     position: fixed;
-    background:$background-color;
+    background:transparentize($background-color, .1);
     width: 45vw;
     height: 25vh;
 
@@ -576,5 +576,24 @@ footer {
         font-weight: 600;
         border: none;
         height:1.6rem;
+    }
+}
+
+// REGISTRATION
+
+.registerform {
+    width: 35rem; height:40rem;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input {
+        margin-bottom: .5rem;
     }
 }

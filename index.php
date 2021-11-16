@@ -32,9 +32,6 @@ function ReadTaxi(){
         </section>
     </div>    
 
-
-
-
 <footer>
     <div class="prefooter">
         
