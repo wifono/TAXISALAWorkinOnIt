@@ -13,10 +13,8 @@ if (isset($_POST['registeruser'])){
     $password = mysqli_real_escape_string($connection,$password);
     $email = mysqli_real_escape_string($connection,$email);
 
-    $hashFormat = "$2y$10$";
-    $salt = "2rOr5iJKE30xOiFtjEwH43";
-    $hashFormat_salt = $hashFormat.$salt;
-    $password = crypt($password, $hashFormat_salt);
+    $password = password_hash($password, PASSWORD_DEFAULT);
+
 
     $query5 = "INSERT INTO admin_users (username, password, email) VALUES ('$newUser', '$password', '$email')";
     $result5 = mysqli_query($connection,$query5);

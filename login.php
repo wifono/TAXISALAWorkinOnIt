@@ -13,27 +13,26 @@
         $username = mysqli_real_escape_string($data,$username);
         $password = mysqli_real_escape_string($data,$password);
 
-        $hashFormat = "$2y$10$";
-        $salt = "2rOr5iJKE30xOiFtjEwH43";
-        $hashFormat_salt = $hashFormat.$salt;
-        $password = crypt($password, $hashFormat_salt);
-    
-
-        $sql = mysqli_query($data,"SELECT * FROM admin_users WHERE username ='".$username."' AND password = '".$password."'");
+        $sql = mysqli_query($data,"SELECT * FROM admin_users WHERE username ='".$username."'");
         $row = mysqli_fetch_array($sql);
+
+        if(password_verify($password, $row["password"])) {
+            echo "najsu";
+        } else {
+            echo "error";
+        }
 
         if($row["usertype"] == "user"){
             $_SESSION['username']= $username;
-            $_SESSION['password']= $password;
             $_SESSION['usertype']= $row["usertype"];
     
             header("Location:index.php");
             die();
         }else if($row["usertype"] == "admin"){
             $_SESSION['username']= $username;
-            $_SESSION['password']= $password;
             $_SESSION['usertype']= $row["usertype"];
             header("Location:admin.php");
+            die();
         }else { 
             header("Location:error.php");
             die();
