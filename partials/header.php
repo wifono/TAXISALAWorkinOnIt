@@ -1,43 +1,60 @@
-<?php 
+<header>
+    <div class="logo">
+        <a href="index.php"><h1>Taxislužby v Šali</h1> </a> 
+    </div>
 
-    $page_name =  basename($_SERVER['SCRIPT_NAME'], '.php');
+    <?php 
+    if(isset($_SESSION["username"]) && $_SESSION["username"] == true) {
+     ?>   
 
-    if ($page_name == 'index' ) $page_name = 'home';
+    <div class="account">
 
-?>
-
-
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title> <?php echo ucfirst($page_name) ?> / Taxíky v Šali</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="..\TAXISALA\assets/css\generals.css">
-        <link rel="stylesheet" href="../TAXISALA\assets/css\normalize.css">
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet"> 
-        <script src="https://kit.fontawesome.com/4c2f3a8e33.js" crossorigin="anonymous"></script>
-    </head>
-
-    <body>
-
-
-        <div class="site">
-        <div class="flexbox">
-
-    <header>
-        <div class="logo">
-            <h1>Taxislužby v Šali</h1>  
+        <div class="username">
+            <h2><?php echo $_SESSION["username"] ?></h2>
         </div>
-    </header>
+        
+        <div id="logout" class="logout">
+            <a href="logout.php">Log out</a>
+        </div>
 
-        <main>
+    </div>
+    
+    <?php 
+    }else; 
+    
+    if(!isset($_SESSION["username"])){
+    ?>
+        
+        <div class="account">
+        
+            <div id="login" class="login">
+                <a href="login.php">Log in</a>
+            </div> 
+        </div> 
+    <?php 
+    };
+    if(isset($_SESSION["usertype"]) && $_SESSION["usertype"] == "admin") {
+        ?>
+            <nav>
+                <ul>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="admin.php">Admin Panel</a></li>
+                </ul>
+            </nav>
+        
+            <?php
+            } else;
+        ?>
+
+    <div class="socials">
+        <ul> 
+            <li>
+                <a href="https://www.facebook.com/Freonnet" target="_blank"><i id="fblogo" class="fab fa-facebook"></i></a>
+            </li>
+
+            <li>
+                <a href="https://github.com/wifono" target="_blank"><i class="fab fa-github"></i></a>
+            </li>
+        </ul>
+     </div>
+</header>

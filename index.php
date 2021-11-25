@@ -1,76 +1,70 @@
- 
- 
- 
- 
- <?php
+<?php 
+    session_start();
 
-    include "partials/header.php"
+    include "partials/head.php";
+    include "partials/header.php";
+?>        
 
+    <div class="container">
+        <section class="mainContent">
+                
+<?php  
+function ReadTaxi(){
+    global $data;
+    global $result;
+
+    $data = mysqli_connect("localhost","root","941000023870268","freonnet_admin_users");
+
+    $query = "SELECT taxiname, taxinumber FROM taxi_database";
+    $result = mysqli_query($data, $query);
+   
+    if(!$result){
+        die("error");
+    }
+    if(mysqli_num_rows($result) > 0) {
+        
+        while($row = mysqli_fetch_array($result)){
+            include "partials/taxibox.php";
+        }
+}}
+    ReadTaxi();
 ?>
-               <div class="container">
-                <section class="mainContent">
+        </section>
+    </div>    
 
-                    <div class="taxiBox">
-                        <h2>A.P.K. Taxi</h2>
+<footer>
+    <div class="prefooter">
+        
+        <div class="banner">
+            <p>Táto stránka funguje vďaka <a href="https://freonnet.sk" target="_blank">freonnet.sk</a></p>
+        </div>
 
-                        <a href="tel:+421948035075">0948 035 075</a>
-                    </div>
+        <div class="infos">
+            
+            <div class="infosheader">
+                <h3>Freonnet</h3>
+                <img src="assets/images/logo.png" alt="assets/images/logo.png">
 
-                    <div class="taxiBox">
-                        <h2>K - Taxi</h2>
-
-                        <a href="tel:+421905605836">0905 605 836</a>
-                    </div>
-
-                    <div class="taxiBox">
-                        <h2>VIVA TAXI</h2>
-
-                        <a href="tel:+421944196195">0944 196 195</a>
-                    </div>
-
-                    <div class="taxiBox">
-                        <h2>IP TAXI</h2>
-
-                        <a href="tel:+421915330550">0915 330 550</a>
-                    </div>
-
-                    <div class="taxiBox">
-                        <h2>SB TAXI</h2>
-
-                        <a href="tel:+421940577277">0949 577 277</a>
-                    </div>
-
-                    <div class="taxiBox">
-                        <h2>LLB - TAXI</h2>
-
-                        <a href="tel:+421948377453">0948 377 453</a>
-                    </div>
-
-                    <div class="taxiBox">
-                        <h2>WORLD TAXI</h2>
-
-                        <a href="tel:+421919451763">0919 451 763</a>
-                    </div>
-
-                    <div class="taxiBox">
-                        <h2>STIV - TAXI</h2>
-
-                        <a href="tel:+421910405010">0910 405 010</a>
-                    </div>
-
-                    <div class="taxiBox">
-                        <h2>Exclusive TAXI</h2>
-    
-                        <a href="tel:+421904825456">0904 825 456</a>
-                    </div>
-                    
-
-
-                </section>
             </div>
+                <ul>
+                    <li>Správa sietí</li>
+                    <li>Opravy počítačov a notebookov</li>
+                    <li>Kamerové systémy</li>
+                    <li>Alarmy</li>
+                    <li>Elektrikárske práce</li>
+                </ul>
+
+                <div class="description">
+                    <p>Freonnet, je mladá spoločnosť poskytujúca pomoc v oblasti IT,
+                        elektroniky a zabezpečenia. Freonnet ponúka služby týkajúce sa opravy elektronických zariadení,
+                        počítačov, zabezpečenia, montáže elektrických zariadení či napríklad výrobu počítačových,
+                        elektronických či optických výrobkov. Našim poslaním je pomáhať Vám v oblasti IT odborne a zodpovedne. </p>
+                </div>
+         </div>
+        </div>
+</div> 
 </div>
-            <?php 
 
-                include "partials/footer.php"
+</footer>
 
-            ?>
+<?php include "partials/footer.php"?>
