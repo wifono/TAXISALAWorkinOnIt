@@ -32,7 +32,7 @@
 
   var editModal = $('.editmodal');
   $(document).ready(function (e) {
-    $(editModal).hide(); 
+    $(editModal).add($('.deletemodal')).hide(); 
 
 });
     
@@ -54,11 +54,24 @@ $(taxiName).on('click', function (e) {
 })
 
 $(document).mouseup(function (e) {
-    var editmodal = $('.editmodal');
+    var editmodal = $('.editmodal').add($('.deletemodal'));
     //ak target nie je objekt na ktorý sa kliklo, ani jeho potomok
     if(!editmodal.is(e.target) && editmodal.has(e.target).length === 0) {
         editmodal.hide();
     }
+});
+
+let deleteButton = $('.deletetaxi');
+
+$(deleteButton).click(function (e) {
+    let deletebtn = $(e.target).parents('.taxiBoxAdmin').attr('id');
+    $('.deletemodal').slideToggle();
+
+
 })
+
+$(window).on("load", function () {
+    $('.loader').fadeOut("slow");
+});
 
 })(jQuery)

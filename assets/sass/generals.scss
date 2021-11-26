@@ -307,8 +307,6 @@ footer {
     align-items: baseline;
     justify-content: flex-end;
 
-    margin-left: 10rem;
-
     img {
         width: 14%;
         height: auto;
@@ -328,8 +326,10 @@ footer {
 .infos {
     display: flex;
     flex-direction: column;
-    margin: 3rem 0 2rem 0;
+    align-items: center;
+    justify-content: center;
     margin-left: 10rem;
+
 
     h3 {
         color: #4267b2;
@@ -350,7 +350,7 @@ footer {
         gap: 0.5rem;
 
         margin-top: -4rem;
-        margin-left: 9.7rem;
+        padding: 0;
     }
 
     li {
@@ -362,7 +362,7 @@ footer {
     width: 40.5rem;
     text-align: justify;
     line-height: 2.2rem;
-    margin-left: 10vw;
+    
 
     p {
         font: {
@@ -376,6 +376,7 @@ footer {
     flex-direction: column;
 }
 
+// TAXIBOX ADMIN
 .taxiBoxAdmin {
     background: rgb(206, 206, 206);
     margin: 0;
@@ -425,24 +426,31 @@ footer {
         a {
             color: $fontSecondaryColor;
         }
-    }
+
+          button {
+            color: $hover;
+            cursor: pointer;
+        }
+    }    
 }
 
-.controls {
+.controls button {
+    background:none;
+    border: none;
+    color: #2c2c2c;
 
-
-
-    li {
-        line-height: 2rem;
-        list-style-type: none;
-
-        a {
-            &:hover &:active {
-                color: $hover;
-                transition: all 0.3s ease-in-out;
-            }
-        }
+    i {
+        font-size: 1.2rem;
     }
+
+
+    &:hover {
+        color: red;
+        transition: all .5s ease-in; 
+
+  
+    }
+    
 }
 
 // ADD TAXI
@@ -552,15 +560,16 @@ footer {
     }
 }
 
-// MODAL OVER
+// EDIT MODAL
 
 .editmodal {
     position: fixed;
-    background:transparentize($background-color, .1);
-    width: 45vw;
+    background:$main-color;
+    width: 35vw;
     height: 25vh;
 
     display: flex;
+    flex-direction:column;
     align-items: center;
     justify-content: center;
     gap: 1rem;
@@ -569,6 +578,7 @@ footer {
 
     h2 {
         color: $fontSecondaryColor;
+        margin-top: 0;
     }
 
     input {
@@ -576,8 +586,32 @@ footer {
         font-weight: 600;
         border: none;
         height:1.6rem;
+        margin-bottom: 3rem;
+        
+        &:first-child {
+            margin-right: 1rem;
+        }
+    }
+
+    button {
+        background:none;
+        border: none;
+        padding: .25rem;
+        margin-top: 2rem;
+        color: $fontSecondaryColor;
+
+        font-size: 1.1rem;
+        font-weight: 900;
+        font-family: $font;
+        text-transform: uppercase;
+
+        &:hover {
+            color: $hover;
+            transition: all 0.3s ease-in-out;
+        }
     }
 }
+
 
 // REGISTRATION
 
@@ -595,5 +629,411 @@ footer {
 
     input {
         margin-bottom: .5rem;
+    }
+}
+
+// DELETE MODAL
+
+.deletemodal {
+    position: fixed;
+
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    background-color: $main-color;
+    color: $fontSecondaryColor;
+
+    padding: 2rem;
+    width: 40rem;
+    height: 10rem;
+
+    h2 {
+        margin-top: 6.5rem;
+    }
+
+    button {
+        background:none;
+        border: none;
+        padding: .5rem;
+        margin-top: 2rem;
+        color: $fontSecondaryColor;
+
+        font-size: 1.1rem;
+        font-weight: 900;
+        font-family: $font;
+        text-transform: uppercase;
+
+        &:hover {
+            color: red;
+            transition: all .5s ease-in;
+        }
+    }
+    span {
+        color: red;
+    }
+}
+
+// LOADER 
+
+.loader {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:$main-color;
+}
+
+// MENU ICON
+
+.menuIcon {
+    display:none;
+}
+
+
+// MEDIA QUERIES
+
+@media screen and (max-width:1057px) {
+    .socials {
+        li {
+            margin: 0;
+        }
+        ul{
+            padding: 0;
+        }
+    }
+
+    header {
+        justify-content: space-evenly;
+    }
+
+    .logo {
+        margin-left: -2rem;
+    }
+
+    nav{
+        ul {
+            padding: 0;
+        }
+    };
+
+}
+
+@media screen and (max-width:930px) {
+    .container {
+        max-width: 100%;
+    }
+    .mainContent {
+        width: 100%;
+    }
+
+    .infos {
+        margin-left: 5rem;
+    }
+    .banner{
+        margin-left: 5rem;
+    }
+}
+
+@media screen and (max-width:745px) {
+
+    .infos {
+        margin-left: 3rem;
+    }
+    .banner{
+        margin-left: 3rem;
+    }
+}
+
+@media screen and (max-width:738px) {
+    .logo{
+        h1{
+            margin-left:-2rem;  
+        }
+    }
+
+    header {
+        ul {
+            gap: .8rem;
+        }
+        .account {
+            left: 90.5vw;
+            
+            h2 {
+                font-size: 1.2rem
+            }
+        }
+        .logout {
+            a {
+                font-size:1.2rem;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:706px) {
+
+    .infos {
+        margin: 1rem;
+    }
+    .banner{
+        margin: 1rem;
+    }
+}
+
+@media screen and (max-width:673px) {
+
+    .infos {
+        font-size:1.5rem;
+        margin: 0 0 0 1rem;
+       
+        p {
+            font-size:2rem; text-align: left;
+        }
+    }
+    .banner{
+        p{
+            font-size:2rem;
+        }
+        margin: 1rem;
+
+    }
+
+    .description {
+        max-width: 80vw;
+        margin-top: -3rem;
+    }
+
+    .descriptionlogo {
+        ul {
+            margin-top: -4rem;
+            padding: 0;
+        }
+    }
+
+
+}
+
+@media screen and (max-width:650px) {
+
+    .taxiBox {
+        width: 80vw;
+    }
+    
+    .socials {
+        ul{
+            gap: 0;
+            padding: 0;
+        }
+        li {
+            margin: 0.6rem;
+        }
+    }
+
+    header .account {
+        left: 90vw;
+    }
+
+    .logo {
+        margin-left: 0;
+    }
+
+    .socials {
+        margin-left: -4rem;
+    }
+
+    nav {
+        margin-left: -2rem;
+    }
+}
+
+@media screen and (max-width:552px) {
+    .logo {
+        margin-left: -1rem;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .menuIcon {
+        display: inline-block;
+        color: $fontSecondaryColor;
+        font-size:1.5rem;
+        margin-left: -2rem;
+    }
+  
+}
+
+
+@media screen and (max-width:492px) {
+
+    .logo {
+        h1{
+            font-size:1.5rem;
+            margin-left: -3rem;
+        }
+        
+    }
+    nav {
+        font-size:.8rem;
+    }
+
+    header .account {
+        left: 86vw;
+    }
+
+    
+    .descriptionlogo {
+        ul {
+            font-size: .8rem;
+            margin-top: -4rem;
+        }
+    }
+
+    .description {
+        max-width: 90vw;
+    }
+}
+
+@media screen and (max-width:477px) {
+    .logo {
+        margin: 0;
+    }
+
+    nav {
+        margin-left: -2.5rem;
+    }
+
+    .socials {
+        i {
+            font-size: 1.2rem;
+            margin-left: -.5rem;
+        }
+    }
+}
+@media screen and (max-width:439px) {
+
+    nav {
+        font-size:.7rem;
+        margin-left: -3.9rem;
+    }
+
+    header {
+        ul {
+            ul {
+                gap: .8rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:433px) {
+
+    .banner p {
+        font-size: 1.5rem;
+    }
+    .descriptionlogo {
+        ul {
+            font-size: .74rem;
+            margin-top: -4rem;
+        }
+    }
+}
+@media screen and (max-width:411px){
+    
+.descriptionlogo ul {
+    font-size: .55rem;
+}
+
+
+.infos {
+    margin-top: -5rem;
+}
+}
+
+@media screen and (max-width:404px) {
+
+    .banner p {
+        font-size: 1.4rem;
+    }
+    .descriptionlogo {
+        ul {
+            font-size: .65rem;
+        }
+    }
+}
+
+
+@media screen and (max-width:390px) {
+
+    .menuIcon {
+        margin-left: -4rem;
+    }
+    
+    .logo {
+        margin-left: -1.5rem;
+    }
+
+}
+@media screen and (max-width:375px) {
+
+    header .account {
+        left: 83vw;
+    }
+
+    .mainContent {
+        margin-top: 1rem;
+    }
+
+}
+
+@media screen and (max-width:360px) {
+
+    header .account {
+        left: 83vw;
+    }
+
+}
+
+@media screen and (max-width:341px) {
+
+     header {
+        .account {
+
+            left: 80vw;
+
+            h2{
+                font-size: .9rem;
+            }
+        }
+
+    
+    }
+}
+
+@media screen and (max-width:320px) {
+
+    .taxiBox {
+        max-width: 70vw;
+    }
+        .logo {
+            
+            h1 {
+                font-size: 1.1rem;
+        }
+    }
+
+    .descriptionlogo ul {
+        font-size: .55rem;
     }
 }

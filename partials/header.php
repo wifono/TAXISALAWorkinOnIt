@@ -1,3 +1,4 @@
+<div class="loader"><img src="assets\images\rolling.svg" alt="#"></div>
 <header>
     <div class="logo">
         <a href="index.php"><h1>Taxislužby v Šali</h1> </a> 
@@ -34,9 +35,13 @@
     <?php 
     };
     if(isset($_SESSION["usertype"]) && $_SESSION["usertype"] == "admin") {
-        ?>
+        ?>                 
+            
+            <a href="#" class="menuIcon"><i class="fas fa-bars"></i></a>
+            
             <nav>
                 <ul>
+   
                     <li><a href="index.php">Home</a></li>
                     <li><a href="admin.php">Admin Panel</a></li>
                 </ul>

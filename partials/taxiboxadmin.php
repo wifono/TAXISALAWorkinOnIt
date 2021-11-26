@@ -8,15 +8,21 @@
  echo '<div class="taxiBoxAdmin" id="'.$taxiid.'">
 <h2>'.$taxiname.'</h2>
 <a class="number">'.$taxinumber.'</a>
+         <div class="controls">
+               <ul>
+                  <button class="deletetaxi"><i class="fas fa-trash"></i></button>
+               </ul>
+         </div>
+      </div>
 
- <div class="controls">
- <form action="admin.php" method="post">
+<div class="deletemodal">
+<h2>Naozaj chcete <span>odstrániť</span> vybranú taxislušbu?</h2>
+<form action="admin.php" method="post">
         <ul>
            <input type="hidden" name="deleteid" value="'.$taxiid.'">
-           <button type="submit" name="deletetaxi" id="'.$taxiid.'"><i class="fas fa-trash"></i></button>
+           <button type="submit" name="deletetaxi" id="'.$taxiid.'">odstrániť</button>
         </ul>
 </form>
-</div>
 
 </div>
 
