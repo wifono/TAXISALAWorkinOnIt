@@ -1,0 +1,30 @@
+// GENERALS
+body {
+    margin: 0;
+    padding: 0;
+    background: $white-bg;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+
+    font-family: $font;
+    font-size: 0.9em;
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.site {
+    width: 100vw;
+    margin: 0;
+}

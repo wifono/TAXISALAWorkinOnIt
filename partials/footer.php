@@ -8,4 +8,5 @@
     </body>
     </div>
     </div>
+    </div> <!--loader-->
 </html>

@@ -46,6 +46,8 @@ function ReadTaxi(){
                 <img src="assets/images/logo.png" alt="assets/images/logo.png">
 
             </div>
+
+            <div class="descriptionlogo">
                 <ul>
                     <li>Správa sietí</li>
                     <li>Opravy počítačov a notebookov</li>
@@ -53,6 +55,7 @@ function ReadTaxi(){
                     <li>Alarmy</li>
                     <li>Elektrikárske práce</li>
                 </ul>
+            </div>
 
                 <div class="description">
                     <p>Freonnet, je mladá spoločnosť poskytujúca pomoc v oblasti IT,

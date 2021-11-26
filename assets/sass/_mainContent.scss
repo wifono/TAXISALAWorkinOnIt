@@ -1,0 +1,75 @@
+.mainContent {
+    width: 70%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3em;
+
+    margin: 1rem 0 0 0;
+}
+
+h2 {
+    font: {
+        family: $logo-font;
+        weight: 400;
+        size: 2.2rem;
+    }
+    margin: 0;
+}
+
+// BOXES
+
+.taxiBox {
+    background: $gray;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: $font-main-color;
+
+    text-align: center;
+
+    width: 15rem;
+    height: 4rem;
+
+    padding: 2rem;
+
+    cursor: pointer;
+    user-select: none;
+    transition: all ease-in-out 0.2s;
+
+    h2 {
+        color: $font-main-color;
+    }
+
+    a {
+        text-decoration: none;
+        color: $font-main-color;
+
+        font: {
+            weight: 100;
+            size: 1.5em;
+        }
+    }
+
+    &:hover,
+    &:active {
+        background: $main-color;
+
+        opacity: 1;
+        color: lighten($font-main-color, 15%);
+
+        h2 {
+            color: $hover;
+        }
+
+        a {
+            color: $fontSecondaryColor;
+        }
+    }
+}

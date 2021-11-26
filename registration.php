@@ -18,13 +18,20 @@ if (isset($_POST['registeruser'])){
 
     $query5 = "INSERT INTO admin_users (username, password, email) VALUES ('$newUser', '$password', '$email')";
     $result5 = mysqli_query($connection,$query5);
+    
+    $check_duplicate_newUser = "SELECT * FROM admin_users WHERE username = '$newUser' ";
 
-    if($result5){
+    $aresult = mysqli_query($connection, $check_duplicate_newUser);
+    $count = mysqli_num_rows($aresult);
+
+    if($result5) {
         echo "success";
     } else{
-        echo "error";
+        echo "Username or e-mail is already in use.";
     }
-}
+}   
+
+ 
 
 ?>
 
