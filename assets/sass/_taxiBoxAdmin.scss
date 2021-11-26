@@ -1,0 +1,76 @@
+// TAXIBOX ADMIN
+.taxiBoxAdmin {
+    background: rgb(206, 206, 206);
+    margin: 0;
+    gap: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: $font-main-color;
+
+    text-align: center;
+
+    width: 25rem;
+    height: 5rem;
+
+    padding: 2rem;
+
+    cursor: pointer;
+    user-select: none;
+    transition: all ease-in-out 0.2s;
+
+    h2 {
+        color: $font-main-color;
+    }
+
+    a {
+        text-decoration: none;
+        color: $font-main-color;
+
+        font: {
+            weight: 100;
+            size: 1.5em;
+        }
+    }
+
+    &:hover,
+    &:active {
+        background: $main-color;
+
+        opacity: 1;
+        color: lighten($font-main-color, 15%);
+
+        h2 {
+            color: $hover;
+        }
+
+        a {
+            color: $fontSecondaryColor;
+        }
+
+          button {
+            color: $hover;
+            cursor: pointer;
+        }
+    }    
+}
+
+.controls button {
+    background:none;
+    border: none;
+    color: #2c2c2c;
+
+    i {
+        font-size: 1.2rem;
+    }
+
+
+    &:hover {
+        color: red;
+        transition: all .5s ease-in; 
+
+  
+    }
+    
+}

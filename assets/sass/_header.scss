@@ -1,0 +1,116 @@
+// HEADER
+header {
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+
+    background: $main-color;
+    border-bottom: 0.1rem solid #131311;
+
+    h2 {
+        color: $logo-color;
+        font-size: 1.5rem;
+        align-self: flex-end;
+    }
+    
+    .logo {
+    font-family: $logo-font;
+    font-size: 1.1rem;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.logout,
+.login {
+    
+    a {
+        text-decoration: none;
+        color: $gray;
+        font-family: $logo-font;
+        font-size: 1.5rem;
+
+        &:hover {
+            color: $hover;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}
+
+.account {
+    position: absolute;
+    left: 92vw;
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+    font-weight: 600;
+    font-family: $font;
+    text-transform: uppercase;
+    
+    a{
+        text-decoration: none;
+        color: $fontSecondaryColor;
+
+        &:hover {
+            color: $hover;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}
+}
+
+// TYPOGRAPHY
+
+h1 {
+    color: $fontSecondaryColor;
+
+    border-top: 0.03em $fontSecondaryColor solid;
+    border-bottom: 0.03em $fontSecondaryColor solid;
+
+    padding-top: 0.25rem;
+    font-weight: 300;
+}
+
+// SOCIALS NAVIGATION
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    li {
+        list-style-type: none;
+        margin: 1rem;
+    }
+
+    a {
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: $fontSecondaryColor;
+        transition: all 0.2s ease-in-out;
+
+        &:hover &:active {
+            color: $hover;
+        }
+    }
+}
+
+#fblogo:hover,
+#fblogo:active {
+    color: $hover;
+    transition: 0.2s all ease-in-out;
+}
+

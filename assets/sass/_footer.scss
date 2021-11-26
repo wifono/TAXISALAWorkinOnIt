@@ -1,0 +1,131 @@
+// FOOTER
+
+footer {
+    margin-top: 2rem;
+    background: rgb(206, 206, 206);
+    padding: 0.02em 0 6rem 0;
+    width: 100%;
+
+    font: {
+        family: $logo-font;
+    }
+
+    border-top: 0.25em darken($main-color, 20%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    user-select: none;
+}
+
+.prefooter {
+    width: 100%;
+    color: $font-main-color;
+
+    background: url("../images/logo2.png") no-repeat;
+
+    background-position: fixed;
+    background-position-x: 58vw;
+    background-size: 41rem;
+    overflow: hidden;
+
+    display: flex;
+
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+
+    min-height: 25rem;
+
+    font: {
+        size: 1rem;
+    }
+
+    p {
+        font: {
+            size: 2rem;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: #4267b2;
+        transition: all 0.5s ease-in-out;
+
+        &:hover,
+        &:active {
+            color: $hover;
+        }
+    }
+}
+
+.infosheader {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.5rem;
+    align-items: baseline;
+    justify-content: flex-end;
+
+    img {
+        width: 14%;
+        height: auto;
+        margin-left: 4px;
+    }
+}
+
+.banner {
+    margin-left: 10rem;
+    width: 100%;
+
+    p {
+        font-size: 2.5rem;
+    }
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10rem;
+
+
+    h3 {
+        color: #4267b2;
+        font: {
+            size: 3.5rem;
+            weight: 300;
+        }
+    }
+
+    align-items: flex-start;
+    justify-content: baseline;
+
+    ul {
+        font: {
+            size: 0.98rem;
+        }
+        display: flex;
+        gap: 0.5rem;
+
+        margin-top: -4rem;
+        padding: 0;
+    }
+
+    li {
+        list-style-type: none;
+    }
+}
+
+.description {
+    width: 40.5rem;
+    text-align: justify;
+    line-height: 2.2rem;
+    
+
+    p {
+        font: {
+            size: 1.5rem;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.loginform {
+
+    width: 25rem;
+    height: 20rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $font;
+    background: darken($gray, 10%);
+
+    input {
+        color: darken($gray,50%);
+        background: darken( $gray, 20%);
+        border: none;
+        margin: 1rem 0;
+        padding: .5rem;
+
+        &:last-child {
+            font-weight: 600;
+
+            &:hover,
+            &:active {
+                background-color: $hover;
+                transition: all 0.3s ease-in-out;
+            }
+ 
+        } &:hover,
+        &:active {
+            background-color: $hover;
+            transition: all 0.3s ease-in-out;
+        }
+
+    }
+
+    label {
+        font-weight: 600;
+    }
+}

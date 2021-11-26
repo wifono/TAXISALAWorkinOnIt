@@ -1,0 +1,42 @@
+// DELETE MODAL
+
+.deletemodal {
+    position: fixed;
+
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    background-color: $main-color;
+    color: $fontSecondaryColor;
+
+    padding: 2rem;
+    width: 40rem;
+    height: 10rem;
+
+    h2 {
+        margin-top: 6.5rem;
+    }
+
+    button {
+        background:none;
+        border: none;
+        padding: .5rem;
+        margin-top: 2rem;
+        color: $fontSecondaryColor;
+
+        font-size: 1.1rem;
+        font-weight: 900;
+        font-family: $font;
+        text-transform: uppercase;
+
+        &:hover {
+            color: red;
+            transition: all .5s ease-in;
+        }
+    }
+    span {
+        color: red;
+    }
+}

@@ -38,7 +38,8 @@
         ?>                 
             
             <a href="#" class="menuIcon"><i class="fas fa-bars"></i></a>
-            
+
+            <div class="navigation">
             <nav>
                 <ul>
    
@@ -46,7 +47,12 @@
                     <li><a href="admin.php">Admin Panel</a></li>
                 </ul>
             </nav>
-        
+
+            <div class="closeButton">
+                <a href="#"><i class="fas fa-times"></i></a>
+            </div>
+            
+            </div>
             <?php
             } else;
         ?>

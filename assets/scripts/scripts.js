@@ -74,4 +74,37 @@ $(window).on("load", function () {
     $('.loader').fadeOut("slow");
 });
 
+$(window).on('load', function () {
+
+    if((screen.width<=560)){
+        $('.navigation').hide();
+    }
+})
+
+$(window).resize(function () {
+
+    if((screen.width<=560)){
+        $('.navigation').hide();
+    } else {
+        $('.navigation').show();
+    }
+})
+
+let menuIcon = $('.menuIcon');
+
+$(menuIcon).on('click', function(e){
+    e.preventDefault();
+    $('.navigation').slideToggle();
+})
+
+$('.closeButton').on('click', function(e){
+    e.preventDefault();
+    $('.navigation').slideToggle();
+})
+
+$(document).mouseup(function(e){
+    
+    if((screen.width<=560) && !$('.navigation').is(e.target) && $('.navigation').has(e.target).length === 0) {
+        $('.navigation').hide();
+}})
 })(jQuery)

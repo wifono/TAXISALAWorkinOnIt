@@ -49,7 +49,7 @@ header {
     font-size: 1.5rem; }
     header .logout a:hover,
     header .login a:hover {
-      color: #01bbc2;
+      color: #4267b2;
       transition: all 0.3s ease-in-out; }
   header .account {
     position: absolute;
@@ -66,7 +66,7 @@ header {
       text-decoration: none;
       color: aliceblue; }
       header ul a:hover {
-        color: #01bbc2;
+        color: #4267b2;
         transition: all 0.3s ease-in-out; }
 
 h1 {
@@ -92,11 +92,11 @@ h1 {
     color: aliceblue;
     transition: all 0.2s ease-in-out; }
     .socials a:hover .socials a:active {
-      color: #01bbc2; }
+      color: #4267b2; }
 
 #fblogo:hover,
 #fblogo:active {
-  color: #01bbc2;
+  color: #4267b2;
   transition: 0.2s all ease-in-out; }
 
 .mainContent {
@@ -106,7 +106,7 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 3em;
-  margin: 5rem 0 5rem 0; }
+  margin: 1rem 0 0 0; }
 
 h2 {
   font-family: "Bebas Neue", cursive;
@@ -141,7 +141,7 @@ h2 {
     opacity: 1;
     color: #515151; }
     .taxiBox:hover h2, .taxiBox:active h2 {
-      color: #01bbc2; }
+      color: #4267b2; }
     .taxiBox:hover a, .taxiBox:active a {
       color: aliceblue; }
 
@@ -179,7 +179,7 @@ footer {
     color: #4267b2;
     transition: all 0.5s ease-in-out; }
     .prefooter a:hover, .prefooter a:active {
-      color: #01bbc2; }
+      color: #4267b2; }
 
 .infosheader {
   display: flex;
@@ -226,10 +226,6 @@ footer {
   .description p {
     font-size: 1.5rem; }
 
-.mainflex {
-  display: flex;
-  flex-direction: column; }
-
 .taxiBoxAdmin {
   background: #cecece;
   margin: 0;
@@ -257,11 +253,11 @@ footer {
     opacity: 1;
     color: #515151; }
     .taxiBoxAdmin:hover h2, .taxiBoxAdmin:active h2 {
-      color: #01bbc2; }
+      color: #4267b2; }
     .taxiBoxAdmin:hover a, .taxiBoxAdmin:active a {
       color: aliceblue; }
     .taxiBoxAdmin:hover button, .taxiBoxAdmin:active button {
-      color: #01bbc2;
+      color: #4267b2;
       cursor: pointer; }
 
 .controls button {
@@ -273,6 +269,9 @@ footer {
   .controls button:hover {
     color: red;
     transition: all .5s ease-in; }
+
+.closeButton {
+  display: none; }
 
 .addTaxi {
   display: flex;
@@ -302,7 +301,7 @@ footer {
     font-weight: 600;
     margin-left: 5rem; }
     .addTaxi button:hover, .addTaxi button:active {
-      background-color: #01bbc2;
+      background-color: #4267b2;
       transition: all 0.3s ease-in-out; }
   .addTaxi form {
     margin: 0; }
@@ -314,7 +313,7 @@ footer {
     text-decoration: none;
     color: #4f4f4f; }
     .addIcon a:hover, .addIcon a:active {
-      color: #01bbc2;
+      color: #4267b2;
       transition: all 0.3s ease-in-out; }
 
 .loginform {
@@ -334,10 +333,10 @@ footer {
     .loginform input:last-child {
       font-weight: 600; }
       .loginform input:last-child:hover, .loginform input:last-child:active {
-        background-color: #01bbc2;
+        background-color: #4267b2;
         transition: all 0.3s ease-in-out; }
     .loginform input:hover, .loginform input:active {
-      background-color: #01bbc2;
+      background-color: #4267b2;
       transition: all 0.3s ease-in-out; }
   .loginform label {
     font-weight: 600; }
@@ -375,7 +374,7 @@ footer {
     font-family: "Open Sans", sans-serif;
     text-transform: uppercase; }
     .editmodal button:hover {
-      color: #01bbc2;
+      color: #4267b2;
       transition: all 0.3s ease-in-out; }
 
 .registerform {
@@ -436,6 +435,29 @@ footer {
 .menuIcon {
   display: none; }
 
+@media screen and (max-width: 1580px) {
+  .editmodal {
+    width: 85vw;
+    height: 20rem; }
+    .editmodal form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      .editmodal form input {
+        margin: 1rem; }
+      .editmodal form button {
+        margin: 0; }
+
+  .deletemodal {
+    width: 85vw; }
+    .deletemodal h2 {
+      margin-top: 3rem;
+      text-align: center; }
+    .deletemodal button {
+      margin: 0; }
+    .deletemodal ul {
+      padding: 0; } }
 @media screen and (max-width: 1057px) {
   .socials li {
     margin: 0; }
@@ -461,7 +483,19 @@ footer {
     margin-left: 5rem; }
 
   .banner {
-    margin-left: 5rem; } }
+    margin-left: 5rem; }
+
+  .addTaxi {
+    flex-direction: column;
+    height: 15rem; }
+    .addTaxi form {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem; }
+      .addTaxi form label {
+        margin-top: 1rem; }
+      .addTaxi form button {
+        margin: .5rem 0; } }
 @media screen and (max-width: 745px) {
   .infos {
     margin-left: 3rem; }
@@ -502,13 +536,24 @@ footer {
   .description {
     max-width: 80vw;
     margin-top: -3rem; }
+    .description p {
+      text-align: center; }
+
+  .prefooter {
+    justify-content: center;
+    align-items: center; }
+
+  .banner {
+    margin: 0;
+    width: auto; }
 
   .descriptionlogo ul {
     margin-top: -4rem;
     padding: 0; } }
 @media screen and (max-width: 650px) {
   .taxiBox {
-    width: 80vw; }
+    width: 70vw;
+    height: 3rem; }
 
   .socials ul {
     gap: 0;
@@ -527,9 +572,18 @@ footer {
 
   nav {
     margin-left: -2rem; } }
-@media screen and (max-width: 552px) {
+@media screen and (max-width: 560px) {
   .logo {
     margin-left: -1rem; }
+
+  .closeButton {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 90vw;
+    padding: 1rem .5rem; }
+    .closeButton a {
+      color: aliceblue; }
 
   nav {
     display: none; }
@@ -538,7 +592,30 @@ footer {
     display: inline-block;
     color: aliceblue;
     font-size: 1.5rem;
-    margin-left: -2rem; } }
+    margin-left: -2rem; }
+
+  .navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    background: #464646; }
+    .navigation nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 0; }
+      .navigation nav a {
+        font-size: 1rem;
+        padding: 1rem; }
+        .navigation nav a:hover, .navigation nav aactive {
+          color: #4267b2;
+          transition: all 0.3s ease-in-out; }
+      .navigation nav ul {
+        display: flex;
+        flex-direction: column;
+        padding: .5rem; } }
 @media screen and (max-width: 492px) {
   .logo h1 {
     font-size: 1.5rem;
@@ -580,12 +657,23 @@ footer {
   .descriptionlogo ul {
     font-size: .74rem;
     margin-top: -4rem; } }
-@media screen and (max-width: 411px) {
+@media screen and (max-width: 414px) {
   .descriptionlogo ul {
     font-size: .55rem; }
 
   .infos {
-    margin-top: -5rem; } }
+    margin-top: -3rem; }
+
+  .loginform {
+    width: 19rem; }
+
+  .taxiBoxAdmin {
+    width: 75vw;
+    gap: .5rem; }
+    .taxiBoxAdmin h2 {
+      font-size: 1.5rem; }
+    .taxiBoxAdmin .number {
+      font-size: 1rem; } }
 @media screen and (max-width: 404px) {
   .banner p {
     font-size: 1.4rem; }
@@ -606,7 +694,10 @@ footer {
     margin-top: 1rem; } }
 @media screen and (max-width: 360px) {
   header .account {
-    left: 83vw; } }
+    left: 83vw; }
+
+  .descriptionlogo ul {
+    display: none; } }
 @media screen and (max-width: 341px) {
   header .account {
     left: 80vw; }
@@ -617,9 +708,6 @@ footer {
     max-width: 70vw; }
 
   .logo h1 {
-    font-size: 1.1rem; }
+    font-size: 1.1rem; } }
 
-  .descriptionlogo ul {
-    font-size: .55rem; } }
-
-/*# sourceMappingURL=generals.css.map */
+/*# sourceMappingURL=styles.css.map */

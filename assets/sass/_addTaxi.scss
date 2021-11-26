@@ -1,0 +1,65 @@
+// ADD TAXI
+
+.addTaxi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 6rem;
+
+    font-family: $font;
+    font-weight: 600;
+    background: $gray;
+    width: 100%;
+
+    input,
+    button {
+        background-color: darken($gray, 5%);
+        border: none;
+        height: 2rem;
+        border-radius: 0.1rem;
+    }
+
+    input {
+        padding: 0.1rem.5rem;
+        text-align: center;
+    }
+
+    label {
+        margin-left: 1rem;
+    }
+
+    button {
+        width: 5rem;
+        height: 2.5rem;
+        background-color: darken($gray, 10%);
+        font-weight: 600;
+        margin-left: 5rem;
+
+        &:hover,
+        &:active {
+            background-color: $hover;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    form {
+        margin: 0;
+    }
+}
+
+.addIcon {
+    font-size: 1.5rem;
+    padding: 0.75rem;
+
+    a {
+        text-decoration: none;
+        color: darken($gray, 50%);
+
+        &:hover,
+        &:active {
+            color: $hover;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}

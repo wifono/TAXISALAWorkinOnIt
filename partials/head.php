@@ -11,7 +11,7 @@
     <title> Taxislužby v Šali</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/css/generals.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/normalize.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
