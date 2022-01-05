@@ -34,5 +34,5 @@
 <input type="hidden" name="editid" value="'.$taxiid.'">
 <button type="submit" name="edittaxi" value="Edit">EDIT</button>
 </form>
-</div>';
+</div>'
 ?>

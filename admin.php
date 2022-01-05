@@ -14,4 +14,4 @@
     }
 ?>
 
-<?php include "partials/adminfooter.php" ?>;
+<?php include "partials/adminfooter.php" ?>
