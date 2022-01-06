@@ -171,7 +171,7 @@
 
     .infos {
         font-size:1rem;
-        margin: 0 0 0 1rem;
+        margin: 0;
        
         p {
             font-size:1.7rem; text-align: left;
@@ -334,6 +334,7 @@
 
     .description {
         max-width: 90vw;
+        
     }
 }
 
@@ -372,7 +373,7 @@
 @media screen and (max-width:433px) {
 
     .banner p {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     .descriptionlogo {
         ul {

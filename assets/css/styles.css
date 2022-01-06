@@ -534,7 +534,7 @@ footer {
 @media screen and (max-width: 673px) {
   .infos {
     font-size: 1rem;
-    margin: 0 0 0 1rem; }
+    margin: 0; }
     .infos p {
       font-size: 1.7rem;
       text-align: left; }
@@ -662,7 +662,7 @@ footer {
     gap: .8rem; } }
 @media screen and (max-width: 433px) {
   .banner p {
-    font-size: 1.5rem; }
+    font-size: 1.3rem; }
 
   .descriptionlogo ul {
     font-size: .74rem;
