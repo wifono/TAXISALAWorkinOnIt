@@ -1,7 +1,6 @@
 // MEDIA QUERIES
 @media screen and (max-width:1580px) {
     .editmodal {
-        width: 85vw;
         height: 20rem;
 
         form {
@@ -22,7 +21,6 @@
     }
     
     .deletemodal {
-        width: 85vw;
 
         h2 {
             margin-top: 3rem;
@@ -100,6 +98,28 @@
     }
 }
 
+@media screen and (max-width:876px) {
+
+    header {
+
+        .account {
+            left: 90vw;
+    }
+}
+}
+
+@media screen and (max-width: 816px) {
+
+    .editmodal {
+        width: 80vw;
+    }
+
+    .deletemodal {
+        width: 80vw;
+    }
+    
+}
+
 @media screen and (max-width:745px) {
 
     .infos {
@@ -150,11 +170,11 @@
 @media screen and (max-width:673px) {
 
     .infos {
-        font-size:1.5rem;
+        font-size:1rem;
         margin: 0 0 0 1rem;
        
         p {
-            font-size:2rem; text-align: left;
+            font-size:1.7rem; text-align: left;
         }
     }
     .banner{
@@ -167,7 +187,6 @@
 
     .description {
         max-width: 80vw;
-        margin-top: -3rem;
 
         p {
             text-align: center;
@@ -366,10 +385,6 @@
     
 .descriptionlogo ul {
     font-size: .55rem;
-}
-
-.infos {
-    margin-top: -3rem;
 }
 
 .loginform {

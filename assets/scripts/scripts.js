@@ -71,7 +71,7 @@ $(deleteButton).click(function (e) {
 })
 
 $(window).on("load", function () {
-    $('.loader').fadeOut("slow");
+    $(".loader").fadeOut();
 });
 
 $(window).on('load', function () {

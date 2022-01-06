@@ -40,28 +40,23 @@ function ReadTaxi(){
         </div>
 
         <div class="infos">
-            
-            <div class="infosheader">
-                <h3>Freonnet</h3>
-                <img src="assets/images/logo.png" alt="assets/images/logo.png">
-
-            </div>
-
-            <div class="descriptionlogo">
-                <ul>
-                    <li>Správa sietí</li>
-                    <li>Opravy počítačov a notebookov</li>
-                    <li>Kamerové systémy</li>
-                    <li>Alarmy</li>
-                    <li>Elektrikárske práce</li>
-                </ul>
-            </div>
-
                 <div class="description">
-                    <p>Freonnet, je mladá spoločnosť poskytujúca pomoc v oblasti IT,
-                        elektroniky a zabezpečenia. Freonnet ponúka služby týkajúce sa opravy elektronických zariadení,
-                        počítačov, zabezpečenia, montáže elektrických zariadení či napríklad výrobu počítačových,
-                        elektronických či optických výrobkov. Našim poslaním je pomáhať Vám v oblasti IT odborne a zodpovedne. </p>
+                    <p>„ <span>Freonnet</span> – Vaša pomoc v IT oblasti“ sa zaoberá </p>                        
+                        <ul>
+                           <li>
+                           - správou a konfiguráciou počítačových LAN sietí (aj štrukturovaná kabeláž a optické siete)
+                           </li>
+
+                           <li>
+                            - Montáž zabezpečovacích a kamerových systémov
+                           </li>
+
+                           <li>
+                            - Elektroinštalačné práce
+                           </li>
+                       </ul>
+
+                       <p>Vaša spokojnosť je pre nás najdôležitejšia, preto je náš prístup profesionálny.</p> 
                 </div>
          </div>
         </div>
